@@ -177,6 +177,14 @@ a:hover {
   background-size: contain;
   padding-left: 130px;
 }
+/* Quicksand is our 'Novanet' font */
+#exlidSearchTileWrapper {
+ font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+}
+/* undo the 'Quicksand' font for the actual form fields / labels */
+.EXLSearchFieldRibbonPreFilters {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+}
 #exlidSearchTileWrapper a:link,
 #exlidSearchTile a:visited { color: #0075b0; }
 /* color the Search button blue */
