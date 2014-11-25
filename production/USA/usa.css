@@ -12,6 +12,17 @@
   font-style: normal;
 }
 
+a:link,
+a:visited {
+ color: #0A2D65;
+ text-decoration: none;
+}
+a:hover {
+  color: #0A2D65;
+  text-decoration: underline;
+}
+
+
 
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
@@ -33,17 +44,8 @@
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
-/*--- To add background image to header ---*/
-#exlidHeaderTile {
-  padding: 0;
-  background-image: url(header-bg-2.png);
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-}
 #exlidHeaderContainer {
-  background-color: #0075b0;
-  background-image: url(body-bg.jpg);
-  background-repeat: repeat-x;
+  background-color: #0A2D65;
 }
 
 /*--- To expand the header image area --- */
@@ -54,53 +56,27 @@
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
-
-#top-bar-institutions {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 0.5em;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  color: #c5cfd7;
-}
-#top-bar-institutions li {
-  display: inline-block;
-  margin: 0;
-  padding: 4px 0.2em;
-}
-#top-bar-institutions li a:link,
-#top-bar-institutions li a:visited {
-  color: #c5cfd7;
-}
-#top-bar-institutions li a:hover {
-  text-decoration: none;
-}
-
 #logo {
   float: left;
-  margin: 0.8em 0;
+  margin: 0 0 0 1em;
   padding: 0;
 }
 
 #header-links {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: normal;
   font-size: 21px;
-  letter-spacing: -1px;
-  float: left;
+  letter-spacing: 1px;
+  float: right;
   margin: 1.8em;
   padding: 0;
   color: white;
 }
 #header-links a:link,
-#header-links a:visited  {
- color: white
-}
-#header-links a:hover {
-  text-decoration: none;
+#header-links a:visited,
+#header-links a:hover  {
+ color: white;
+ text-decoration: none;
 }
 
 
@@ -110,16 +86,14 @@
 /* keep the footer at the bottom */
 .EXLResultsTile,
 .EXLHomeContainer {
-  min-height: 30em;
+  min-height: 35em;
 }
 
 #footerEXL {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
-  background-color: #0075b0;
-  background-image: url(footer-bg.jpg);
-  background-repeat: repeat-x;
+  background-color: #0A2D65;
   min-height: 156px;
   color: white;
 }
@@ -131,7 +105,35 @@
 #footerEXL a:hover {
   text-decoration: none;
 }
-
+#fixed-live-help {
+  position: fixed;
+  left: 80%;
+  bottom: 10px;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  padding: 0 0.4em 0.1em 0.2em;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+  color: white;
+  box-shadow: 0 0 2px 2px #0075b0;
+  cursor: pointer;
+}
+#fixed-live-help span {
+  display: inline;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#live-help-logo {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+#live-help-glimmer {
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
 /* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
 
 /*--- To change width of advanced search button ---*/
@@ -144,6 +146,9 @@
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
 
 /* add the novanet logo */
 #exlidSearchTile {
@@ -153,7 +158,9 @@
   background-size: contain;
   padding-left: 130px;
 }
-#exlidSearchTileWrapper a:link, #exlidSearchTile a:visited { color: #0075b0; }
+#exlidSearchTileWrapper a:link,
+#exlidSearchTile a:visited { color: #0075b0; }
+
 /* color the Search button blue */
 #exlidSearchTileWrapper input.submit {
   background-color: #0075b0;
@@ -176,7 +183,7 @@
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #0075b0; }
+.EXLTabsRibbon div li.EXLResultTab a { color: #0A2D65; }
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
@@ -189,13 +196,13 @@
 .EXLSliderRefine a,
 .EXLSliderRefine a:hover,
 .EXLSliderRefine a:visited {
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
+  background-color: #0A2D65;
+  background-image: linear-gradient(#9E3438, #0A2D65);
   color: white;
 }
 /* more slider stuff */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  color: #0075b0;
+  color: #0A2D65;
 }
  
 /* really define the facet sections 
