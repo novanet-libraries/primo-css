@@ -22,6 +22,7 @@
 
 
 <script type="text/javascript">
+//<![CDATA[
 //All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
 
 var novanet = novanet || {};
@@ -29,7 +30,7 @@ var novanet = novanet || {};
 novanet.current_view = 'DAL'; //change this for each View
 novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
 novanet.$head = $('head');
-novanet.headElements = [];  //an array of DOMElements we will add to the <head> node at the end of this script.
+novanet.headElements = [];  //an array of DOMElements we will add to the head node at the end of this script.
 
 //remove Ex Libris apple-touch-icon
 $("link[rel=apple-touch-icon]").remove();
@@ -88,5 +89,5 @@ $.each(metas, function(idx, attrs){
 novanet.$head.append(novanet.headElements);
 
 //Todo.  Add opensearch description link tag.
-
+// ]]>
 </script>

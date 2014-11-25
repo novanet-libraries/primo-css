@@ -1,5 +1,28 @@
 
+<div id="logo">
+  <a href="https://usainteanne.ca/bibliotheque" title="Accueil (Bibliothèque)">
+    <img src="../uploaded_files/USA/header-logo.png" alt="usa logo"/>
+  </a>
+</div>
+
+<div id="header-links">
+  <a href="/primo_library/libweb/action/search.do?&vid=USA">Nouvelle Recherche</a>
+  |
+  <a href="http://libguides.com/" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Guides Disciplinaires</a>
+  |  
+  <a href="http://libraryh3lp.com" target="livehelp">Live Help</a>
+  |
+  <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Aide</a>
+</div>
+<script>
+//@todo detect current language of the page and change the labels in #header-links.
+</script>
+
+
 <script type="text/javascript">
+//<![CDATA[
+//All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
+
 var novanet = novanet || {};
 
 novanet.current_view = 'USA'; //change this for each View
@@ -69,24 +92,5 @@ novanet.$head.append(novanet.headElements);
 
 //Todo.  Add opensearch description link tag.
 
-</script>
-
-
-<div id="logo">
-  <a href="https://usainteanne.ca/bibliotheque" title="Accueil (Bibliothèque)">
-    <img src="../uploaded_files/USA/header-logo.png" alt="usa logo"/>
-  </a>
-</div>
-
-<div id="header-links">
-  <a href="/primo_library/libweb/action/search.do?&vid=USA">Nouvelle Recherche</a>
-  |
-  <a href="http://libguides.com/" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Guides Disciplinaires</a>
-  |  
-  <a href="http://libraryh3lp.com" target="livehelp">Live Help</a>
-  |
-  <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Aide</a>
-</div>
-<script>
-//@todo detect current language of the page and change the labels in #header-links.
+// ]]>
 </script>
