@@ -43,7 +43,7 @@ a:hover {
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
 #top-bar-links {
-  background-color: black;
+  background-color: #707372;
   height: 19px;
   width: 100%;
   list-style-type: none;
@@ -63,7 +63,7 @@ a:hover {
 }
 
 #exlidHeaderContainer {
-  background-color: #365D14;
+  
 }
 #exlidHeaderTile {
   padding: 0;
@@ -94,7 +94,7 @@ a:hover {
 }
 #header-links a:link,
 #header-links a:visited  {
-  color: white;
+  color: #707372;
   text-decoration: none;
 }
 
@@ -112,16 +112,16 @@ a:hover {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
-  background-color: #365D14;
   min-height: 156px;
   color: white;
 }
 #footerEXL a:link,
 #footerEXL a:visited {
   padding: 0.2em;
-  color: white;
+  color: #707372;
 }
 #footerEXL a:hover {
+  color: #f2ac00;
   text-decoration: none;
 }
 #fixed-live-help {
