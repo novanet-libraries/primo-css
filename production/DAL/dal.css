@@ -157,6 +157,12 @@ a:hover {
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+
+/* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
+.EXLSearchFieldRibbonFormBrowseSearchFor {
+  width: 32em;
+}
+
 #exlidFacetsLightboxContainer a.EXLSubmit {
   background-color: #0075b0;
 /*  background-image: linear-gradient(#5189AA, #245980); */
