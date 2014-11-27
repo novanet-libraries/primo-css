@@ -13,7 +13,19 @@
 }
 
 
+body {
+  font-family: Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
+}
 
+a:link,
+a:visited {
+  color: #31312b;
+  text-decoration: none;
+}
+a:hover {
+  color: #df6e12;
+  text-decoration: none;
+}
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
 /* --- To remove RSS image from search box --- */
@@ -34,22 +46,8 @@
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
-/*--- To add background image to header ---*/
-#exlidHeaderTile {
-  padding: 0;
-  background-image: url(header-bg-2.png);
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-}
-#exlidHeaderContainer {
-  background-color: #0075b0;
-  background-image: url(body-bg.jpg);
-  background-repeat: repeat-x;
-}
-
-
 /*--- To expand the header image area --- */
-#exlidHeaderTile{width:100%;}
+#exlidHeaderTile{padding: 0; width:100%;}
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
@@ -57,55 +55,109 @@
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
 
-#top-bar-institutions {
+#top-bar-links {
+  clear: both;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-left: 0.5em;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
+  font-size:90%;
   line-height: 18px;
   letter-spacing: 1px;
   color: #c5cfd7;
+  background-color: #23231f;
+  border-bottom: solid 4px #df6e12;
 }
-#top-bar-institutions li {
+#top-bar-links li {
   display: inline-block;
   margin: 0;
   padding: 4px 0.2em;
 }
-#top-bar-institutions li a:link,
-#top-bar-institutions li a:visited {
+#top-bar-links li a:link,
+#top-bar-links li a:visited {
   color: #c5cfd7;
 }
-#top-bar-institutions li a:hover {
-  text-decoration: none;
-}
-
-#logo {
-  float: left;
-  margin: 0.8em 0;
-  padding: 0;
+#top-bar-links li a:hover {
+  color: #df6e12;
 }
 
 #header-links {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  letter-spacing: -1px;
-  float: left;
-  margin: 1.8em;
+  width: 98%;
+  font-family: 'Lean O Sans FY W04',sans-serif;
+  font-weight: bold;
+  font-size: 13px;
   padding: 0;
-  color: white;
+  margin: 0;
+  color: #23231f;
+  text-transform: uppercase;
+}
+#header-links a {
+  width: 19%; /* depends on number of links -- 100 / number of links */
+  margin: 0 0 1em 0;
+  padding: 2em 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid #c9c4b8;
+}
+#header-links a:first-child {
+  padding: 1em 0 0 0;
+}
+#header-links a:last-child {
+  border-right: 1px solid #c9c4b8;  
 }
 #header-links a:link,
 #header-links a:visited  {
- color: white
+ color: #23231f;
 }
 #header-links a:hover {
-  text-decoration: none;
+  color: #df6e12;
+}
+#header-links a span {
+  font-weight: 300;
+  text-transform: none;
+  color: #8c8d7c;
+  display: block;
+}
+#header-links a span.icon img {
+  padding: 7px;
+  border-radius: 19px;
+  background-color: #df6e12;
+}
+#contact-header {
+ clear:both;
+ width: 100%;
+ background-color: #23231f;
+ color: #c9c4b8;
+ padding: 0.2em 0;
+ text-transform: uppercase;
+ text-align: right;
 }
 
-
+/* --------------------------------------------- USER AREA ---------------------------------------------- */
+#exlidUserAreaTile {
+  background-color: #23231f;
+}
+#exlidUserAreaRibbon {
+  color: #c9c4b8;
+  height: 25px;  
+}
+#exlidUserAreaRibbon li {
+  background-image: none;
+  font-size: 90%;
+  padding-top: 4px;
+}
+#exlidUserAreaRibbon li a {
+  color: #c9c4b8;
+}
+#exlidUserAreaRibbon li span.EXLUserAreaStart {
+  display:none;
+}
+#exlidUserAreaRibbon li span.EXLMyShelfStarSelected {
+  background-image: url(icon_star_on.png);
+}
+#exlidUserAreaRibbon li.EXLUserName {
+  color: #c9c4b8;
+}
 
 /* ----------------------------------------------- FOOTER ----------------------------------------------- */
 
@@ -114,23 +166,30 @@
 .EXLHomeContainer {
   min-height: 30em;
 }
-
-#footerEXL {
+.EXLFooterTile {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
-  background-color: #0075b0;
-  background-image: url(footer-bg.jpg);
-  background-repeat: repeat-x;
+  background-color: #e4e1db;
   min-height: 156px;
-  color: white;
+  color: #23231f;
 }
-#footerEXL a:link,
-#footerEXL a:visited {
+.EXLFooterTile {
+  background-image: none;
+}
+.EXLFooterTile li {
+border-right: 1px solid #23231f;
+}
+.EXLFooterTile li.EXLFooterLastLink {
+  border: none;
+}
+.EXLFooterTile a:link,
+.EXLFooterTile a:visited {
   padding: 0.2em;
-  color: white;
+  color: #23231f;
 }
-#footerEXL a:hover {
+.EXLFooterTile a:hover {
+  color: #df6e12;
   text-decoration: none;
 }
 #fixed-live-help {
@@ -231,7 +290,7 @@
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #0075b0; }
+.EXLTabsRibbon div li.EXLResultTab a { color: #31312b; }
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
