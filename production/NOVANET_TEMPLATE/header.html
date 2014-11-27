@@ -39,13 +39,13 @@ var novanet = novanet || {};
 novanet.current_view = 'NOVANET'; //change this for each View
 novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
 novanet.$head = $('head');
-novanet.$headElements = [];  //an array of DOMElements we will add to the <head> node at the end of this script.
+novanet.headElements = [];  //an array of DOMElements we will add to the <head> node at the end of this script.
 
 //remove Ex Libris apple-touch-icon
 $("link[rel=apple-touch-icon]").remove();
 
 //add our own favicon
-novanet.$headElements.push(
+novanet.headElements.push(
   $('<link>').attr({
     rel: 'shortcut icon',
     href: 'http://www.novanet.ns.ca/favicon.ico'
@@ -56,7 +56,7 @@ novanet.$headElements.push(
 //add Novanet apple-touch-icons
 $.each(['57', '114', '72', '144', '60', '120', '76', '152', '180'], function(idx, s){
   var szstring = s + 'x' + s;
-  novanet.$headElements.push(
+  novanet.headElements.push(
     $('<link>').attr({
       rel:   'apple-touch-icon',
       sizes: szstring,
@@ -69,7 +69,7 @@ $.each(['57', '114', '72', '144', '60', '120', '76', '152', '180'], function(idx
 //the order of the sizes array is important, especially the first and last elements.
 $.each(['192', '160', '96', '16', '32'], function(idx, s){
   var szstring = s + 'x' + s;
-  novanet.$headElements.push(
+  novanet.headElements.push(
     $('<link>').attr({
       rel  : 'icon',
       sizes: szstring,
@@ -89,17 +89,17 @@ var metas = [
 {name: 'msapplication-config', content: novanet.upload_folder + '/browserconfig.xml'}
 ];
 $.each(metas, function(idx, attrs){
-  novanet.$headElements.push(
+  novanet.headElements.push(
     $('<meta>').attr(attrs).get()
   );
 });
 
-console.log('additions: ' + novanet.$headElements.length);
+//console.log('additions: ' + novanet.headElements.length);
 
 //add all the new elements to the DOM:
-novanet.$head.append(novanet.$headElements);
+novanet.$head.append(novanet.headElements);
 
-console.log(novanet.$head);
+//console.log(novanet.$head);
 
 //Todo.  Add opensearch description link tag.
 // ]]>
