@@ -169,7 +169,7 @@
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
 
 /* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
-.EXLSearchFieldRibbonFormBrowseSearchFor {
+.EXLSearchFieldRibbonFormSearchFor.EXLSearchFieldRibbonFormBrowseSearchFor {
   width: 32em;
 }
 
