@@ -12,6 +12,17 @@
   font-style: normal;
 }
 
+a:link,
+a:visited  {
+ color: #56001B;
+ text-decoration: none;
+}
+a:hover {
+  color: #56001B;
+  text-decoration: underline;
+}
+
+
 
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
@@ -36,14 +47,12 @@
 /*--- To add background image to header ---*/
 #exlidHeaderTile {
   padding: 0;
-  background-image: url(header-bg-2.png);
+  background-image: url(header-bg.jpg);
   background-repeat: no-repeat;
-  background-position: 25px 25px;
+  background-size: 100% 100%;
 }
 #exlidHeaderContainer {
-  background-color: #0075b0;
-  background-image: url(body-bg.jpg);
-  background-repeat: repeat-x;
+  background-color: #56001B;
 }
 
 /*--- To expand the header image area --- */
@@ -55,45 +64,22 @@
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
 
-#top-bar-institutions {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 0.5em;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  color: #c5cfd7;
-}
-#top-bar-institutions li {
-  display: inline-block;
-  margin: 0;
-  padding: 4px 0.2em;
-}
-#top-bar-institutions li a:link,
-#top-bar-institutions li a:visited {
-  color: #c5cfd7;
-}
-#top-bar-institutions li a:hover {
-  text-decoration: none;
-}
-
 #logo {
   float: left;
-  margin: 0.8em 0;
+  margin: 10px 0 0 10px;
   padding: 0;
 }
 
 #header-links {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  letter-spacing: -1px;
+  font-family: BebasNeueRegular, Impact, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
   float: left;
-  margin: 1.8em;
+  letter-spacing: 2.4px;
+  margin: 45px 0 0 45px;
   padding: 0;
   color: white;
+  text-transform: uppercase;
 }
 #header-links a:link,
 #header-links a:visited  {
@@ -113,29 +99,66 @@
   min-height: 30em;
 }
 
-#footerEXL {
+.EXLFooterTile {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
-  background-color: #0075b0;
-  background-image: url(footer-bg.jpg);
+  background-color: #56001B;
+  background-image: url(body-bg.jpg);
+  background-size: auto 100%;
   background-repeat: repeat-x;
   min-height: 156px;
   color: white;
 }
-#footerEXL a:link,
-#footerEXL a:visited {
+.EXLFooterTile a:link,
+.EXLFooterTile a:visited {
   padding: 0.2em;
   color: white;
 }
-#footerEXL a:hover {
+.EXLFooterTile a:hover {
   text-decoration: none;
+}
+
+#fixed-live-help {
+  position: fixed;
+  left: 80%;
+  bottom: 10px;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  padding: 0 0.4em 0.1em 0.2em;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+  color: white;
+  box-shadow: 0 0 2px 2px #0075b0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#fixed-live-help span {
+  display: inline;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#live-help-logo {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+#live-help-glimmer {
+  height: 100%;
+  width: auto;
+  position: absolute;
 }
 
 /* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+
+/* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
+.EXLSearchFieldRibbonFormSearchFor.EXLSearchFieldRibbonFormBrowseSearchFor {
+  width: 32em;
+}
 #exlidFacetsLightboxContainer a.EXLSubmit {
   background-color: #0075b0;
 /*  background-image: linear-gradient(#5189AA, #245980); */
@@ -144,6 +167,9 @@
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
 
 /* add the novanet logo */
 #exlidSearchTile {
@@ -153,14 +179,29 @@
   background-size: contain;
   padding-left: 130px;
 }
-#exlidSearchTileWrapper a:link, #exlidSearchTile a:visited { color: #0075b0; }
-/* color the Search button blue */
-#exlidSearchTileWrapper input.submit {
-  background-color: #0075b0;
-/*  background-image: linear-gradient(#5189AA, #245980); */
-  background-image: linear-gradient(#30A5e0, #0075b0);
+/* Quicksand is our 'Novanet' font */
+#exlidSearchTileWrapper {
+ font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+}
+/* undo the 'Quicksand' font for the actual form fields / labels */
+.EXLSearchFieldRibbonPreFilters {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
 }
 
+#exlidSearchTileWrapper a:link,
+#exlidSearchTileWrapper a:visited {
+  color: #0075b0;
+}
+
+/* color the Search button blue */
+#exlidSearchTileWrapper input.submit {
+  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  background-color: #0075b0;
+
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
 /* 'Rechercher' is longer than 'Search', so widen the button a little */
 /*  (the default is 91% / 9%  at the time of writing this.)           */
 .EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormFields {
@@ -176,7 +217,7 @@
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #0075b0; }
+.EXLTabsRibbon div li.EXLResultTab a { color: #56001B; }
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
@@ -189,13 +230,13 @@
 .EXLSliderRefine a,
 .EXLSliderRefine a:hover,
 .EXLSliderRefine a:visited {
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
+  background-color: #56001B;
+  background-image: linear-gradient(#86304B, #56001B);
   color: white;
 }
 /* more slider stuff */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  color: #0075b0;
+  color: #56001B;
 }
  
 /* really define the facet sections 
