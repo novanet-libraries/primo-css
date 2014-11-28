@@ -45,8 +45,8 @@ a:hover {
 
 /*--- To add background image to header ---*/
 
-#exlidHeaderContainer {
-  height: 154px;
+.EXLLogo {
+  height: 126px;
   background-color: #1f5190;
   background-image: url(header-bg.jpg);
   background-repeat: repeat-x;
@@ -95,7 +95,6 @@ a:hover {
 .EXLResultsContainer,
 .EXLHomeContainer {
   min-height: 35em;
-  margin-top: 18px; /* the fixed dimensions of header require this */
 }
 
 #footerEXL {
