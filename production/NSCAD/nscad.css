@@ -12,6 +12,16 @@
   font-style: normal;
 }
 
+a:link,
+a:visited  {
+ color: #292B2E;
+ text-decoration: none;
+}
+a:hover {
+  color: #292B2E;
+  text-decoration: underline;
+}
+
 
 
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
@@ -34,72 +44,38 @@
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
-/*--- To add background image to header ---*/
-#exlidHeaderTile {
-  padding: 0;
-  background-image: url(header-bg-2.png);
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-}
-#exlidHeaderContainer {
-  background-color: #0075b0;
-  background-image: url(body-bg.jpg);
-  background-repeat: repeat-x;
-}
-
 
 /*--- To expand the header image area --- */
-#exlidHeaderTile{width:100%;}
+#exlidHeaderTile{padding: 0; width:100%; border-top: 5px solid #BFD500; }
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
-#exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
+#exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px; }
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
-#exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
-
-
-#top-bar-institutions {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 0.5em;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  color: #c5cfd7;
-}
-#top-bar-institutions li {
-  display: inline-block;
-  margin: 0;
-  padding: 4px 0.2em;
-}
-#top-bar-institutions li a:link,
-#top-bar-institutions li a:visited {
-  color: #c5cfd7;
-}
-#top-bar-institutions li a:hover {
-  text-decoration: none;
-}
+#exlidUserAreaRibbon .EXLSignOut { font-weight: bold; }
 
 #logo {
-  float: left;
-  margin: 0.8em 0;
-  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #header-links {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-family: Arial, helvectica, sans-serif;
   font-weight: normal;
-  font-size: 21px;
-  letter-spacing: -1px;
-  float: left;
-  margin: 1.8em;
+  margin: 1.8em 0 1em 200px;
   padding: 0;
-  color: white;
+  color: #292B2E;
+}
+#header-links a {
+  padding: 0.8em 2em 0.2em 2em;
+  border-left: 1px solid #D4D4D4;
+}
+#header-links a:last-child {
+  border-right: 1px solid #D4D4D4;
 }
 #header-links a:link,
 #header-links a:visited  {
- color: white
+ color: #292B2E;
 }
 #header-links a:hover {
   text-decoration: none;
@@ -115,24 +91,26 @@
   min-height: 30em;
 }
 
-#footerEXL {
+.EXLFooterTile {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
-  background-color: #0075b0;
+  background-color: white;
   background-image: url(footer-bg.jpg);
   background-repeat: repeat-x;
   min-height: 156px;
-  color: white;
+  color: #292B2E;
+  border-top: 4px solid #BFD500;
 }
-#footerEXL a:link,
-#footerEXL a:visited {
+.EXLFooterTile a:link,
+.EXLFooterTile a:visited {
   padding: 0.2em;
-  color: white;
+  color: #292B2E;
 }
-#footerEXL a:hover {
+.EXLFooterTile a:hover {
   text-decoration: none;
 }
+
 #fixed-live-help {
   position: fixed;
   left: 80%;
@@ -231,7 +209,7 @@
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #0075b0; }
+.EXLTabsRibbon div li.EXLResultTab a { color: #292B2E; }
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
@@ -244,13 +222,12 @@
 .EXLSliderRefine a,
 .EXLSliderRefine a:hover,
 .EXLSliderRefine a:visited {
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
+  background-color: #BFD500;
   color: white;
 }
 /* more slider stuff */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  color: #0075b0;
+  color: #BFD500;
 }
  
 /* really define the facet sections 
