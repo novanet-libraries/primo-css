@@ -18,8 +18,8 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="//libraryh3lp.com/js/libraryh3lp.js?multi"></script>
 
+<script type="text/javascript" src="//libraryh3lp.com/js/libraryh3lp.js?multi"></script>
 <script type="text/javascript">
 //<![CDATA[
   // add the 'Ask a Librarian!' thing.
@@ -69,6 +69,8 @@
 // ]]>
 </script>
 
+<!-- uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js -->
+<script type="text/javascript" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/uri.js"></script>
 <script type="text/javascript">
 // <![CDATA[ 
   novanet.translate = novanet.translate || {};
@@ -76,21 +78,25 @@
   t.currentLang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr_FR' : 'en_US';
   t.otherLang = t.currentLang == 'fr_FR' ? 'en_US' : 'fr_FR';
   t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Changer de Français' : 'Switch to English';
+  t.otherLangURI = new URI();
+  t.otherLangURI.search(function(searchParams){
+    searchParams.prefLang = t.otherLang;
+  });
   t.$changeLang = $('<li>').append(
-    $('<a>').attr('href', '#').html(t.otherLangLabel)
+    $('<a>').attr('href', t.otherLangURI.href()).html(t.otherLangLabel)
   ).insertAfter('#exlidMyAccount');
     
-  //uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js
-  $.getScript(novanet.upload_folder + '/uri.js', function(){
-    var otherLangURI = new URI();
-    otherLangURI.search(function(searchParams){
-      searchParams.prefLang = t.otherLang;
-    });
-    t.$changeLang.find('a').attr('href', otherLangURI.href());
-  });
   $('.translate').each(function(){
-    var $this = $(this), data = $this.data('translate');
-    $this.html(data[t.currentLang] || data.en_US);
+    var $this = $(this), translations;
+    try{
+      translations = $this.data('translate');
+      $this.html(translations[t.currentLang] || translations.en_US);
+    }
+    catch (e){
+      console.log('Error parsing ' + $this.attr('data-translate'));
+      console.log(e);
+      return true; //"return true" inside $.each is like "continue" in a for loop.
+    }
   });
 // ]]>
 </script>
