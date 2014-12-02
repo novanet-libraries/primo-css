@@ -1,0 +1,98 @@
+     	
+<!--begin footer-->
+<div class="EXLFooterLinksContainer" style="position: relative">
+  <ul class="EXLFooterLinksList"> 
+    <li class="EXLFooterFirstLink">
+      <a href="http://www.novanet.ns.ca/">Novanet Home</a>
+    </li>
+    <li class="EXLFooterLastLink">
+      <a href="http://www.novanet.ns.ca/staff-contact-info/">Staff and Contact Info</a>
+    </li>
+  </ul>
+
+  <div id="fixed-live-help" jid="novanet@chat.libraryh3lp.com">
+    <div style="position:relative">
+      <img id="live-help-glimmer" style="display:none" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/glimmer.png" />
+      <img id="live-help-logo" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/mstile-144x144.png" alt="novanet logo"/>
+      <span class="translate" data-translate='{"en_US":"Ask A Librarian!"}'></span>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="//libraryh3lp.com/js/libraryh3lp.js?multi"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+  // add the 'Ask a Librarian!' thing.
+  
+  novanet.livehelp_url = (function(){
+    var base = 'https://libraryh3lp.com/chat/novanet@chat.libraryh3lp.com',
+        skin = '10162',
+        theme = 'gota',
+        title = 'Live Help',
+        identity = 'Librarian',
+        css = 'https://sites.stfx.ca/library/sites/sites.stfx.ca.library/files/libraryh3lp.css',
+        url = '';
+        
+    url = base + '?';
+    url += 'skin='      + encodeURIComponent(skin);
+    url += '&theme='    + encodeURIComponent(theme);
+    url += '&title='    + encodeURIComponent(title);
+    url += '&identity=' + encodeURIComponent(identity);
+    url += '&css='      + encodeURIComponent(css);
+    return url;    
+  })();
+  novanet.livehelp_glimmer = function(){
+    var $glimmer = $("#live-help-glimmer");
+    $glimmer.show().animate({
+      left: '100%'
+    }, function(){
+      $glimmer.hide().css('left', '0');
+    });
+  };
+
+  $(document).ready(function(){
+    $('#fixed-live-help').on('click', function(evt){
+      evt.stopPropagation();
+      if (novanet.livehelp_window){
+        novanet.livehelp_window.focus();
+      }
+      else{
+        novanet.livehelp_window = window.open(novanet.livehelp_url, 'Live Help', 'resizable=1,width=300,height=300,top:300,left:300');
+      }
+    });
+    
+    //$.each([1,2,3,4], function(idx){
+    //  setTimeout(novanet.livehelp_glimmer, idx*20000);
+    //});
+  });
+  
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[ 
+  novanet.translate = novanet.translate || {};
+  var t = novanet.translate;
+  t.currentLang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr_FR' : 'en_US';
+  t.otherLang = t.currentLang == 'fr_FR' ? 'en_US' : 'fr_FR';
+  t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Changer de Français' : 'Switch to English';
+  t.$changeLang = $('<li>').append(
+    $('<a>').attr('href', '#').html(t.otherLangLabel)
+  ).insertAfter('#exlidMyAccount');
+    
+  //uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js
+  $.getScript(novanet.upload_folder + '/uri.js', function(){
+    var otherLangURI = new URI();
+    otherLangURI.search(function(searchParams){
+      searchParams.prefLang = t.otherLang;
+    });
+    t.$changeLang.find('a').attr('href', otherLangURI.href());
+  });
+  $('.translate').each(function(){
+    var $this = $(this), data = $this.data('translate');
+    $this.html(data[t.currentLang] || data.en_US);
+  });
+// ]]>
+</script>
+
+<!--end footer-->
