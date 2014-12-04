@@ -70,8 +70,8 @@ a:hover {
 #header-links {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: normal;
-  font-size: 19x;
-  float: right;
+  font-size: 21px;
+  float: left;
   margin: 1.8em;
   padding: 0;
 }
