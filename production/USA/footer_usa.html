@@ -77,7 +77,7 @@
   var t = novanet.translate;
   t.currentLang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr_FR' : 'en_US';
   t.otherLang = t.currentLang == 'fr_FR' ? 'en_US' : 'fr_FR';
-  t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Changer de Français' : 'Switch to English';
+  t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Français' : 'English';
   t.otherLangURI = new URI();
   t.otherLangURI.search(function(searchParams){
     searchParams.prefLang = t.otherLang;
@@ -95,8 +95,8 @@
     catch (e){
       console.log('Error parsing ' + $this.attr('data-translate'));
       console.log(e);
-      return true; //"return true" inside $.each is like "continue" in a for loop.
     }
+    return true; //"return true" inside $.each is like "continue" in a for loop.  
   });
 // ]]>
 </script>
