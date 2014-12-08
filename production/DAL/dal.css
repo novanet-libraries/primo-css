@@ -337,14 +337,17 @@ a:hover {
 .EXLSliderRefine a:hover,
 .EXLSliderRefine a:visited {
   background-color: #f2ac00;
-  background-image: linear-gradient(#668D44, #f2ac00);
+  background-image: none;
+  border: 1px solid #707372;
   color: white;
 }
 /* more slider stuff */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   color: #f2ac00;
 }
- 
+.datebox {
+  border: 1px solid #707372;
+}
 /* really define the facet sections 
 .EXLFacetContainer {
   border: 1px solid #0075b0;
