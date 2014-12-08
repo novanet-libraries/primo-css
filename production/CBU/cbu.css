@@ -288,7 +288,7 @@ border-right: 1px solid #23231f;
 /* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
 
 /* hide the Show bX Hot Articles thing */
-#resultsHeaderNoId { display: none; }
+#resultsHeaderNoId > .EXLCustomLayoutTile:first-child { display: none; }
 
 .EXLTabsRibbon div li.EXLResultTab a { color: #31312b; }
 
