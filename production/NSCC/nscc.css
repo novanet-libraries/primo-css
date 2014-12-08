@@ -33,7 +33,7 @@ a:hover {
 #exlidMainMenuTile div.EXLMainMenuContainer {float:right; width:40em}
 
 /*--- To remove last bar on first row of footer ---*/
-.EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:1px solid #FFFFFF; }
+.EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:none; }
 
 /*--- To remove subscribe to Library News Feeds button from search bar---*/
 #exlidSearchBanner {display:none;}
@@ -97,22 +97,22 @@ a:hover {
   min-height: 35em;
 }
 
-#footerEXL {
-  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  font-size: 21px;
-  letter-spacing: -1px;
+.EXLFooterTile {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  background-image: none;
   background-color: #1f5190;
-  background-image: url(footer-bg.jpg);
-  background-repeat: repeat-x;
   min-height: 156px;
   color: white;
 }
-#footerEXL a:link,
-#footerEXL a:visited {
+.EXLFooterTile a:link,
+.EXLFooterTile a:visited {
   padding: 0.2em;
   color: white;
 }
-#footerEXL a:hover {
+.EXLFooterTile a:hover {
   color: white;
   text-decoration: none;
 }
@@ -123,6 +123,9 @@ a:hover {
   border: 2px solid white;
   border-radius: 0.3em;
   padding: 0 0.4em 0.1em 0.2em;
+  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  letter-spacing: -1px;
   background-color: #0075b0;
   background-image: linear-gradient(#30A5e0, #0075b0);
   color: white;
