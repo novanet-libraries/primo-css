@@ -290,3 +290,9 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
   background-image: linear-gradient(#30A5e0, #0075b0);
 }
 
+/* --- Hide the List of Historic Loans --- */
+/* this is a temporary measure while we actually purge the list of historic loans */
+.EXLMyAccountMainHeaderTitle a[href*="type=history"],
+.EXLMyAccountMainHeaderTitle div.EXLMyAccountMainHeaderContent span.EXLMyAccountMainHeaderContentSeparator {
+  display: none;
+}
