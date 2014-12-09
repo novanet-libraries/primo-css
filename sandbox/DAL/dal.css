@@ -1,0 +1,416 @@
+/* ----------------------------------------------- GENERAL --------------------------------------------------*/
+
+@font-face {
+  font-family 'QuicksandBook';
+  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
+    src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.woff2') format('woff2'),
+         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont') format('woff'),
+         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.svg#quicksandbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:link,
+a:visited {
+ color: #f2ac00;
+ text-decoration: none;
+}
+a:hover {
+  color: #f2ac00;
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------- Dalhousie Fonts --------------------------------------------------*/
+
+@font-face {
+    font-family: "ClassicGrotesque";
+    font-style: normal;
+    font-weight: normal;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/61f1f16a-4a72-4c60-93ba-aa8ab19f8652.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/41d33820-6252-4164-a857-0814a1fd2302.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/32e51bed-d726-44f8-ad5a-91b848435a51.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0.svg#3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesque";
+    font-style: italic;
+    font-weight: normal;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/98fef7b4-1337-4df5-b297-f4e2375bc2fe.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/813cab7b-0a4e-4973-8278-af66df24ea8e.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/b08e6609-2511-465f-bd1f-7f1f2cad1bfe.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/cbdd13a3-c1c8-4f4e-b760-d027985b9a33.svg#cbdd13a3-c1c8-4f4e-b760-d027985b9a33") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesque";
+    font-style: normal;
+    font-weight: bold;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f56470d2-1fa8-40a6-96aa-554a90056153.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/5f79a4f3-bd11-47d1-ade7-8284d3c7ab62.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c62352b5-0f4e-41b3-b33e-5b0f8c8a31b5.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e6215709-8f2b-4651-bbe7-2bb040f6c90d.svg#e6215709-8f2b-4651-bbe7-2bb040f6c90d") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesque";
+    font-style: italic;
+    font-weight: bold;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/1c4696db-e7dc-4845-bcb1-855fff8dc288.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/42152cfb-fd57-451d-b408-bcc16129073f.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/0ff2a0f5-321c-475b-8275-44a0d5dca749.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/6226bc93-c7d0-4077-b085-835f2c5961f8.svg#6226bc93-c7d0-4077-b085-835f2c5961f8") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueRg";
+    font-style: normal;
+    font-weight: normal;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/99898fd0-33c7-482e-ae03-d8598f04cd57.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c6b0c4e7-468c-4416-bf4f-c8254e52ec05.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f3d24aab-e54a-40b1-b3cc-5842d107509b.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf.svg#f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueRg";
+    font-style: italic;
+    font-weight: normal;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f7e6a0c0-aa75-4ef2-b917-b0fd8209ab56.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/1f7cd237-bbbf-4514-92e5-e4917b9fee1c.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/777df9a4-2e0d-48f8-9eac-48e2d53e3daa.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/9c1d2322-bb9f-4d16-b473-983e668ce34e.svg#9c1d2322-bb9f-4d16-b473-983e668ce34e") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueRg";
+    font-style: normal;
+    font-weight: bold;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f56470d2-1fa8-40a6-96aa-554a90056153.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/5f79a4f3-bd11-47d1-ade7-8284d3c7ab62.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c62352b5-0f4e-41b3-b33e-5b0f8c8a31b5.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e6215709-8f2b-4651-bbe7-2bb040f6c90d.svg#e6215709-8f2b-4651-bbe7-2bb040f6c90d") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueRg";
+    font-style: italic;
+    font-weight: bold;
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/1c4696db-e7dc-4845-bcb1-855fff8dc288.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/42152cfb-fd57-451d-b408-bcc16129073f.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/0ff2a0f5-321c-475b-8275-44a0d5dca749.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/6226bc93-c7d0-4077-b085-835f2c5961f8.svg#6226bc93-c7d0-4077-b085-835f2c5961f8") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-Bk";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/61f1f16a-4a72-4c60-93ba-aa8ab19f8652.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/41d33820-6252-4164-a857-0814a1fd2302.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/32e51bed-d726-44f8-ad5a-91b848435a51.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0.svg#3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-SmBI";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/1c4696db-e7dc-4845-bcb1-855fff8dc288.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/42152cfb-fd57-451d-b408-bcc16129073f.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/0ff2a0f5-321c-475b-8275-44a0d5dca749.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/6226bc93-c7d0-4077-b085-835f2c5961f8.svg#6226bc93-c7d0-4077-b085-835f2c5961f8") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-SmB";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f56470d2-1fa8-40a6-96aa-554a90056153.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/5f79a4f3-bd11-47d1-ade7-8284d3c7ab62.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c62352b5-0f4e-41b3-b33e-5b0f8c8a31b5.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e6215709-8f2b-4651-bbe7-2bb040f6c90d.svg#e6215709-8f2b-4651-bbe7-2bb040f6c90d") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-BkI";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/98fef7b4-1337-4df5-b297-f4e2375bc2fe.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/813cab7b-0a4e-4973-8278-af66df24ea8e.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/b08e6609-2511-465f-bd1f-7f1f2cad1bfe.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/cbdd13a3-c1c8-4f4e-b760-d027985b9a33.svg#cbdd13a3-c1c8-4f4e-b760-d027985b9a33") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-Bd";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e5883671-b0c6-499a-8f96-47395b697cce.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/8dffb395-34b5-420e-9c9c-0db09685d947.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/0f266978-afd4-4e30-9dc1-408f64684e6d.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/69c218f1-4d71-4f2b-96f4-e1342c4c11bd.svg#69c218f1-4d71-4f2b-96f4-e1342c4c11bd") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-Lt";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c4fc8f19-3f8a-47d3-8012-c58981225ea7.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/b0c28414-808f-469d-ae65-859e915f5e45.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/5f9bbccf-59b9-41cc-a851-21ecc2852640.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/58eec2e0-0229-4ec9-82da-ed92fc44a489.svg#58eec2e0-0229-4ec9-82da-ed92fc44a489") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-It";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f7e6a0c0-aa75-4ef2-b917-b0fd8209ab56.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/1f7cd237-bbbf-4514-92e5-e4917b9fee1c.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/777df9a4-2e0d-48f8-9eac-48e2d53e3daa.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/9c1d2322-bb9f-4d16-b473-983e668ce34e.svg#9c1d2322-bb9f-4d16-b473-983e668ce34e") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-BdI";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/6466aca7-5939-446d-86ca-d90e76f3e4d0.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/692b64ef-8e0b-41fb-a22c-a8f7394f669d.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c4fff10e-59c0-41df-b561-5e4b9a0b5a51.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/becbcef0-0a17-45cd-a744-3ad9ddae17f3.svg#becbcef0-0a17-45cd-a744-3ad9ddae17f3") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-LtI";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/fb71458c-8329-4be1-a8f9-e862fd9af38f.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f921e3c9-7f4b-485b-8991-88425e6ea70f.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/a8615718-8709-4e49-9de1-6be4fb6d99b6.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/856303d8-4aca-421b-a3b4-c8e6333cacbd.svg#856303d8-4aca-421b-a3b4-c8e6333cacbd") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-Md";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/299895da-b451-41f9-960c-024373a276bc.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f94b2377-9dc9-4479-9f47-fe1c6c0f8bb8.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/722de522-eea2-4ead-a0eb-fc1aba0e77ba.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e84a807b-c1a1-4cb7-b3a5-5668829ba868.svg#e84a807b-c1a1-4cb7-b3a5-5668829ba868") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-XBd";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/b9b46239-61e1-45e4-a98e-4128a510f4e5.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e61a69b1-7487-4a91-a527-ccfc547f9ac6.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f980081b-cd80-49a7-b322-3b9b8e5c52f6.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/e9e15beb-8620-4f1a-a138-ef89b52dd952.svg#e9e15beb-8620-4f1a-a138-ef89b52dd952") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-XBd";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/8c88f3fe-c5b1-43c3-b33b-96fe6afa90eb.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/78c1df56-4c29-4b14-b33f-7b10273bdafc.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/0a453906-7c07-4757-9b0b-f4fcc3eadad0.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/37017979-42b1-4a63-a0f9-8cf088e94dda.svg#37017979-42b1-4a63-a0f9-8cf088e94dda") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-Rg";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/99898fd0-33c7-482e-ae03-d8598f04cd57.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c6b0c4e7-468c-4416-bf4f-c8254e52ec05.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f3d24aab-e54a-40b1-b3cc-5842d107509b.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf.svg#f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf") format("svg");
+}
+@font-face {
+    font-family: "ClassicGrotesqueW01-MdI";
+    src: url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/2723a598-2155-4a48-a08b-d6da5d3729d7.eot?#iefix") format("eot"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/c460b776-24e2-47f4-a932-3ee0ae1057f5.woff") format("woff"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/fa7db186-2745-4aae-9cf9-69f59bb62fe2.ttf") format("truetype"), url("http://www.dal.ca/etc/designs/dalhousie/clientlibs/default-css/css/fonts/36a863d2-2429-4da3-8447-57249c673a65.svg#36a863d2-2429-4da3-8447-57249c673a65") format("svg");
+}
+
+/* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
+
+/* --- To remove RSS image from search box --- */
+#exlidSearchBanner, .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;}
+
+/* --- To remove Last Update line ---*/
+.EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;} 
+#exlidMainMenuTile div.EXLMainMenuContainer {float:right; width:40em}
+
+/*--- To remove last bar on first row of footer ---*/
+.EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:1px solid #FFFFFF; }
+
+/*--- To remove subscribe to Library News Feeds button from search bar---*/
+#exlidSearchBanner {display:none;}
+
+/*--- To remove Update My Screen Automatically line ---*/
+.EXLFooterAutoUpdate {display:none}
+
+/* ----------------------------------------------- HEADER ----------------------------------------------- */
+
+#top-bar-links {
+  color: #707372;
+  height: 19px;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#top-bar-links a {
+  font-family: ClassicGrotesque,Arial,sans-serif;
+  font-weight: bold;
+  font-size: smaller;
+}
+#top-bar-links li {
+  display: inline-block;
+  padding: 0.1em;
+  margin: 0 0 0 1em;
+}
+
+#exlidHeaderContainer {
+  
+}
+#exlidHeaderTile {
+  padding: 0;
+}
+/*--- To expand the header image area --- */
+#exlidHeaderTile{width:100%;}
+.EXLSearchWrapper{clear:both;}
+#exlidMainMenuTile {display:none;}
+#exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
+/* .EXLSignOut is the className for the Sign In and Sign Out labels */
+#exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
+
+#logo {
+  float: left;
+  margin: 1em;
+  padding: 0;
+}
+
+#header-links {
+  font-family: ClassicGrotesque,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  letter-spacing: 1px;
+  float: right;
+  margin: 1.8em;
+  padding: 0;
+  color: white;
+}
+#header-links a:link,
+#header-links a:visited  {
+  color: #707372;
+  text-decoration: none;
+}
+
+
+
+/* ----------------------------------------------- FOOTER ----------------------------------------------- */
+
+/* keep the footer at the bottom */
+.EXLResultsTile,
+.EXLHomeContainer {
+  min-height: 35em;
+}
+
+#footerEXL {
+  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  letter-spacing: -1px;
+  min-height: 156px;
+  color: white;
+}
+#footerEXL a:link,
+#footerEXL a:visited {
+  padding: 0.2em;
+  color: #707372;
+}
+#footerEXL a:hover {
+  color: #f2ac00;
+  text-decoration: none;
+}
+#fixed-live-help {
+  position: fixed;
+  left: 80%;
+  bottom: 10px;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  padding: 0 0.4em 0.1em 0.2em;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+  color: white;
+  box-shadow: 0 0 2px 2px #0075b0;
+  cursor: pointer;
+}
+#fixed-live-help span {
+  display: inline;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#live-help-logo {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+#live-help-glimmer {
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
+/* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
+
+/*--- To change width of advanced search button ---*/
+#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+
+/* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
+.EXLSearchFieldRibbonFormSearchFor.EXLSearchFieldRibbonFormBrowseSearchFor {
+  width: 32em;
+}
+
+#exlidFacetsLightboxContainer a.EXLSubmit {
+  background-color: #0075b0;
+/*  background-image: linear-gradient(#5189AA, #245980); */
+  background-image: linear-gradient(#30A5e0, #0075b0);  
+}
+.EXLFacetsLightboxTabsRibbon {
+  border-bottom: 2px solid #0075b0;
+}
+
+/* add the novanet logo */
+#exlidSearchTile {
+  background-color: lightgrey;
+  background-image: url(logo-for-search-tile-200x67.png), linear-gradient(#F7F9F9, #D8DEE3, #F4F7F8);
+  background-repeat: no-repeat, repeat-x;
+  background-size: contain;
+  padding-left: 130px;
+}
+/* Quicksand is our 'Novanet' font */
+#exlidSearchTileWrapper {
+ font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+}
+/* undo the 'Quicksand' font for the actual form fields / labels */
+.EXLSearchFieldRibbonPreFilters {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+#exlidSearchTileWrapper a:link,
+#exlidSearchTile a:visited { color: #0075b0; }
+/* color the Search button blue */
+#exlidSearchTileWrapper input.submit {
+  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  padding-left: 0.2em;
+  padding-right: 0.2em;  background-color: #0075b0;
+/*  background-image: linear-gradient(#5189AA, #245980); */
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
+
+/* 'Rechercher' is longer than 'Search', so widen the button a little */
+/*  (the default is 91% / 9%  at the time of writing this.)           */
+.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormFields {
+  width: 86%;
+}
+.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormSubmitSearch {
+  width: 14%;
+}
+
+
+/* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
+
+/* hide the Show bX Hot Articles thing */
+#resultsHeaderNoId > .EXLCustomLayoutTile:first-child { display: none; }
+
+.EXLTabsRibbon div li.EXLResultTab a { color: #f2ac00; }
+
+/* --- To remove Tags & Reviews Tab ---*/
+.EXLTabsRibbon div li.EXLReviewsTab {display:none;}
+/* --- To remove the Requests Tab (merged with "Locations" to be "Locations and Requests" --- */
+.EXLTabsRibbon div li.EXLRequestTab {display:none;}
+
+/* add some padding between title/link and rest of the metadata */
+.EXLSummaryContainer .EXLResultTitle { margin-bottom: 0.7em; }
+
+.EXLSliderRefine a,
+.EXLSliderRefine a:hover,
+.EXLSliderRefine a:visited {
+  background-color: #f2ac00;
+  background-image: none;
+  border: 1px solid #707372;
+  color: white;
+}
+/* more slider stuff */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  color: #f2ac00;
+}
+.datebox {
+  border: 1px solid #707372;
+}
+/* really define the facet sections 
+.EXLFacetContainer {
+  border: 1px solid #0075b0;
+  padding: 0.1em;
+  border-radius: 0.2em;
+}
+.EXLFacetContainer ol li {
+  margin: 0;
+  padding: 0.2em;
+  border-bottom: 1px solid lightgrey;
+}
+.EXLFacetContainer ol li:last-child {
+  border-bottom: none;
+}
+.EXLFacetContainer h1,
+.EXLFacetContainer h3 {
+  color: white;
+  background-color: #30A5e0;
+  background-image: linear-gradient(#0075b0, #30A5e0);
+  padding: 0.2em;
+  margin: 0;
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
+}
+.EXLFacetContainer h4{
+  color: white;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+  padding: 0.2em;
+  margin: 0 0 0.4em 0;
+}
+.EXLFacetContainer h4:first-child {
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+/* hide the down arrow under 'More options' (becuase the options don't appear below, but rather above */
+.EXLFacetsDisplayMore img { display: none; }
+
+
+/* --- To remove Locations Tab for Alma customers .EXLTabsRibbon div li.EXLLocationsTab {display:none;}---*/
+/* --- To remove Request Tab for Alma customers .EXLTabsRibbon div li.EXLRequestTab {display:none;}---*/
+
+/* --- To add line counts for IE6/7 ---*/
+.EXLResultsList td.EXLResultNumber { vertical-align: middle; display:table-cell; display:block; width:1%; }
+
+/* --- To add line counts for IE<=8 Firefox ---*/
+.EXLResultsList td.EXLResultNumber { vertical-align: middle; display:block; width:1%; }
+html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:table-cell; }
+
+/* ----------------------------------------------- MY ACCOUNT ----------------------------------------------- */
+
+/* --- To remove "o" from left side of e-shelf ---*/
+.offstage {display:none;} #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbon {height:180px;}
+
+/*--- To remove the My Databases tab in My Account ----*/
+#exlidMyDatabasesTab {display:none;}
+
+.EXLMyAccountTabsRibbon {
+  border-bottom: 2px solid #0075b0;
+}
+.EXLMyAccountTabsRibbon div li.EXLMyAccountSelectedTab {
+  border: 1px solid #0075b0;
+  border-bottom: 2px solid #0075b0;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
+
