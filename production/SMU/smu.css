@@ -12,6 +12,14 @@
   font-style: normal;
 }
 
+/* St. Mary's fonts.  Convert these to <link> tags if we ever get access to <head> */
+/* @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic); */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+
+body {
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 a:link,
 a:visited {
  color: #6E0408;
@@ -58,17 +66,19 @@ a:hover {
 
 #logo {
   float: left;
-  margin: 0.8em 0;
+  margin: 0;
   padding: 0;
 }
-
+#logo img {
+  width: auto;
+  height: 3em;
+}
 #header-links {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 16px;
   letter-spacing: 1px;
-  float: right;
-  margin: 1.8em;
+  float: left;
+  margin: 1em 2em;
   padding: 0;
   color: white;
 }
@@ -94,6 +104,7 @@ a:hover {
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #6E0408;
+  background-image: none;
   min-height: 156px;
   color: white;
 }
