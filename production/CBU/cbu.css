@@ -171,6 +171,7 @@ a:hover {
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #e4e1db;
+  background-image: none;
   min-height: 156px;
   color: #23231f;
 }

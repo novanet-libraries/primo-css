@@ -95,6 +95,7 @@ a:hover {
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #0A2D65;
+  background-image: none;
   min-height: 156px;
   color: white;
 }
