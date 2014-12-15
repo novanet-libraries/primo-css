@@ -13,6 +13,7 @@
 }
 
 
+
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
 /* --- To remove RSS image from search box --- */
@@ -45,6 +46,7 @@
   background-image: url(body-bg.jpg);
   background-repeat: repeat-x;
 }
+
 
 /*--- To expand the header image area --- */
 #exlidHeaderTile{width:100%;}
@@ -131,11 +133,49 @@
 #footerEXL a:hover {
   text-decoration: none;
 }
-
+#fixed-live-help {
+  position: fixed;
+  left: 80%;
+  bottom: 10px;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  padding: 0 0.4em 0.1em 0.2em;
+  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  letter-spacing: -1px;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+  color: white;
+  box-shadow: 0 0 2px 2px #0075b0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#fixed-live-help span {
+  display: inline;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#live-help-logo {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+#live-help-glimmer {
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
 /* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+
+/* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
+.EXLSearchFieldRibbonFormSearchFor.EXLSearchFieldRibbonFormBrowseSearchFor {
+  width: 32em;
+}
+
 #exlidFacetsLightboxContainer a.EXLSubmit {
   background-color: #0075b0;
 /*  background-image: linear-gradient(#5189AA, #245980); */
@@ -144,6 +184,9 @@
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
 
 /* add the novanet logo */
 #exlidSearchTile {
@@ -153,11 +196,26 @@
   background-size: contain;
   padding-left: 130px;
 }
-#exlidSearchTileWrapper a:link, #exlidSearchTile a:visited { color: #0075b0; }
+/* Quicksand is our 'Novanet' font */
+#exlidSearchTileWrapper {
+ font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+}
+/* undo the 'Quicksand' font for the actual form fields / labels */
+.EXLSearchFieldRibbonPreFilters {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+#exlidSearchTileWrapper a:link,
+#exlidSearchTileWrapper a:visited {
+  color: #0075b0;
+}
+
 /* color the Search button blue */
 #exlidSearchTileWrapper input.submit {
+  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
   background-color: #0075b0;
-/*  background-image: linear-gradient(#5189AA, #245980); */
   background-image: linear-gradient(#30A5e0, #0075b0);
 }
 
@@ -174,7 +232,7 @@
 /* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
 
 /* hide the Show bX Hot Articles thing */
-#resultsHeaderNoId { display: none; }
+#resultsHeaderNoId > .EXLCustomLayoutTile:first-child { display: none; }
 
 .EXLTabsRibbon div li.EXLResultTab a { color: #0075b0; }
 
@@ -267,3 +325,9 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
   background-image: linear-gradient(#30A5e0, #0075b0);
 }
 
+/* --- Hide the List of Historic Loans --- */
+/* this is a temporary measure while we actually purge the list of historic loans */
+.EXLMyAccountMainHeaderTitle a[href*="type=history"],
+.EXLMyAccountMainHeaderTitle div.EXLMyAccountMainHeaderContent span.EXLMyAccountMainHeaderContentSeparator {
+  display: none;
+}
