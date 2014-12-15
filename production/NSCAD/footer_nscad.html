@@ -15,7 +15,6 @@
 
   <div id="fixed-live-help" jid="novanet@chat.libraryh3lp.com">
     <div style="position:relative">
-      <img id="live-help-glimmer" style="display:none" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/glimmer.png" />
       <img id="live-help-logo" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/mstile-144x144.png" alt="novanet logo"/>
       <span>Ask A Librarian!</span>
     </div>
@@ -45,14 +44,6 @@
     url += '&css='      + encodeURIComponent(css);
     return url;    
   })();
-  novanet.livehelp_glimmer = function(){
-    var $glimmer = $("#live-help-glimmer");
-    $glimmer.show().animate({
-      left: '100%'
-    }, function(){
-      $glimmer.hide().css('left', '0');
-    });
-  };
 
   $(document).ready(function(){
     $('#fixed-live-help').on('click', function(evt){
@@ -64,10 +55,6 @@
         novanet.livehelp_window = window.open(novanet.livehelp_url, 'Live Help', 'resizable=1,width=300,height=300,top:300,left:300');
       }
     });
-    
-    //$.each([1,2,3,4], function(idx){
-    //  setTimeout(novanet.livehelp_glimmer, idx*20000);
-    //});
   });
   
 // ]]>

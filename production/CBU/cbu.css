@@ -218,11 +218,7 @@ border-right: 1px solid #23231f;
   height: 1em;
   width: auto;
 }
-#live-help-glimmer {
-  height: 100%;
-  width: auto;
-  position: absolute;
-}
+
 /* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
 
 /*--- To change width of advanced search button ---*/
