@@ -194,9 +194,9 @@ a:hover {
   font-size: 21px;
   letter-spacing: 1px;
   float: right;
-  margin: 1.8em;
+  margin: 1.4em;
   padding: 0;
-  color: white;
+  color: #707372;
 }
 #header-links a:link,
 #header-links a:visited  {
@@ -204,7 +204,10 @@ a:hover {
   text-decoration: none;
 }
 
-
+#header-links a:hover {
+  color: #f2ac00;
+  text-decoration: none;
+}
 
 /* ----------------------------------------------- FOOTER ----------------------------------------------- */
 
@@ -218,6 +221,7 @@ a:hover {
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
+  background-image: none;
   min-height: 156px;
   color: white;
 }
@@ -277,6 +281,9 @@ a:hover {
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
 
 /* add the novanet logo */
 #exlidSearchTile {
