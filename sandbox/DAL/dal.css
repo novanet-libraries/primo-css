@@ -193,8 +193,8 @@ a:hover {
   font-weight: normal;
   font-size: 21px;
   letter-spacing: 1px;
-  float: right;
-  margin: 1.8em;
+  float: left;
+  margin: 1.4em;
   padding: 0;
   color: white;
 }
