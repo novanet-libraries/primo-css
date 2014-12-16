@@ -188,7 +188,7 @@ a:hover {
 /* add the novanet logo */
 #exlidSearchTile {
   background-color: lightgrey;
-  background-image: url("../uploaded_files/DAL/logo-for-search-tile-200x67.png"), linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
+  background-image: url("logo-for-search-tile-200x67.png"), linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
   background-repeat: no-repeat, repeat-x;
   background-size: contain;
   padding-left: 130px;
