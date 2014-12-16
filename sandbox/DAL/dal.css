@@ -14,7 +14,7 @@
 
 a:link,
 a:visited {
- color: #f2ac00;
+ color: #272727;
  text-decoration: none;
 }
 a:hover {
@@ -22,8 +22,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.EXLResultTitle a:link, .EXLResultTitle a:visited  {
+  border-bottom: 1px solid #f2ac00;
+  color: #000;
+}
 
-
+.EXLResultTitle a:hover, .EXLResultTitle a:focus {
+  border-bottom: 1px solid #707372;
+  color: #707372;
+  text-decoration: none;
+}
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
 /* --- To remove RSS image from search box --- */
@@ -230,7 +238,16 @@ a:hover {
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId > .EXLCustomLayoutTile:first-child { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #f2ac00; }
+.EXLTabsRibbon div li.EXLResultTab a:link, .EXLTabsRibbon div li.EXLResultTabs a:visited { 
+	border-bottom: 1px solid #f2ac00;
+	color: #000;
+}
+
+.EXLTabsRibbon div li.EXLResultTab a:hover, .EXLTabsRibbon div li.EXLResultTab a:focus { 
+  border-bottom: 1px solid #707372;
+  color: #707372;
+  text-decoration: none;
+}
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
@@ -365,4 +382,9 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 .EXLSearchFieldRibbonBrowseSearchLink a {
 	font-size: 100%;
+}
+
+/* Facets */
+.EXLFacetContainer h4 {
+	color: #272727;
 }
