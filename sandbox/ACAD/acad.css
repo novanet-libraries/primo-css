@@ -162,9 +162,12 @@ a:hover {
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+
 /* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+/* Some institutions are requesting this remain unhidden
 #scopesList { display: none; }
 .EXLSearchFieldRibbonFormSearchFor { width: 96% }
+*/
 
 /* add the novanet logo */
 #exlidSearchTile {
