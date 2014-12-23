@@ -154,31 +154,21 @@ a:hover {
   min-height: 30em;
 }
 .EXLFooterTile {
-  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  font-size: 21px;
-  letter-spacing: -1px;
-  background-color: #e4e1db;
+  font-family : sans-serif;
+  font-size: 18px;
+  background-color: #168C4C;
   background-image: none;
-  min-height: 156px;
-  color: #23231f;
+  padding: 3em;
+  color: white;
 }
-.EXLFooterTile {
-  background-image: none;
-}
-.EXLFooterTile li {
-border-right: 1px solid #23231f;
-}
-.EXLFooterTile li.EXLFooterLastLink {
-  border: none;
-}
+
 .EXLFooterTile a:link,
 .EXLFooterTile a:visited {
   padding: 0.2em;
-  color: #23231f;
+  color: white;
 }
 .EXLFooterTile a:hover {
-  color: #df6e12;
-  text-decoration: none;
+  color: #ff0;
 }
 #fixed-live-help {
   position: fixed;
