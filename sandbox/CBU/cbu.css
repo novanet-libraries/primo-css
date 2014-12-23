@@ -112,11 +112,13 @@ a:hover {
 #header-links a:hover {
   color: #df6e12;
 }
+/*
 #header-links .fa {
   border-radius: 50%;
   background-color: #df6e12;
   padding: 8%;
 }
+*/
 
 /* --------------------------------------------- USER AREA ---------------------------------------------- */
 #exlidUserAreaTile {
