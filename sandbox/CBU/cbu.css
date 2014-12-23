@@ -164,6 +164,7 @@ a:hover {
 
 .EXLFooterTile li {
   padding: 40px;
+  border-right: none;
 }
 .EXLFooterTile li.EXLFooterFirstLink {
   padding: 0;
