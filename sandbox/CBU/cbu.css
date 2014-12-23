@@ -118,28 +118,6 @@ a:hover {
   padding: 8%;
 }
 
-#contact-header {
- clear:both;
- width: 100%;
- background-color: #23231f;
- color: #8c8d7c;
- padding: 0.2em 0;
- text-transform: uppercase;
- text-align: right;
- font-family: 'Univers W02', sans-serif;
- font-size: 90%;
-}
-#contact-header .tel {
-  font-weight: bold;
-  color:white;
-  font-size: 110%;
-}
-#contact-header .email {
-  font-weight: bold;
-  color: #fed301;
-  text-transform: none;
-  font-size: 110%;
-}
 /* --------------------------------------------- USER AREA ---------------------------------------------- */
 #exlidUserAreaTile {
   background-color: #23231f;
