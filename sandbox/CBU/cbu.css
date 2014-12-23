@@ -12,6 +12,7 @@
   font-style: normal;
 }
 
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
 body {
   font-family: Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
@@ -130,15 +131,19 @@ a:hover {
  padding: 0.2em 0;
  text-transform: uppercase;
  text-align: right;
+ font-family: 'Univers W02', sans-serif;
+ font-size: 90%;
 }
 #contact-header .tel {
   font-weight: bold;
   color:white;
+  font-size: 110%;
 }
 #contact-header .email {
   font-weight: bold;
   color: #fed301;
   text-transform: none;
+  font-size: 110%;
 }
 /* --------------------------------------------- USER AREA ---------------------------------------------- */
 #exlidUserAreaTile {
