@@ -162,9 +162,14 @@ a:hover {
   color: white;
 }
 
+.EXLFooterTile li {
+  padding: 40px;
+}
+.EXLFooterTile li.EXLFooterFirstLink {
+  padding: 0;
+}
 .EXLFooterTile a:link,
 .EXLFooterTile a:visited {
-  padding: 0.2em;
   color: white;
 }
 .EXLFooterTile a:hover {
