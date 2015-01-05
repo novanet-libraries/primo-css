@@ -44,19 +44,13 @@ a:hover {
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
-/*--- To add background image to header ---*/
-#exlidHeaderTile {
-  padding: 0;
-  background-image: url(header-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 #exlidHeaderContainer {
   background-color: #56001B;
 }
 
 /*--- To expand the header image area --- */
-#exlidHeaderTile{width:100%;}
+#exlidHeaderTile{padding:0;width:100%;}
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
@@ -104,9 +98,6 @@ a:hover {
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #56001B;
-  background-image: url(body-bg.jpg);
-  background-size: auto 100%;
-  background-repeat: repeat-x;
   min-height: 156px;
   color: white;
 }
