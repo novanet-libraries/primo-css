@@ -44,19 +44,13 @@ a:hover {
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
-/*--- To add background image to header ---*/
-#exlidHeaderTile {
-  padding: 0;
-  background-image: url(header-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 #exlidHeaderContainer {
   background-color: #56001B;
 }
 
 /*--- To expand the header image area --- */
-#exlidHeaderTile{width:100%;}
+#exlidHeaderTile{padding:0;width:100%;}
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
@@ -66,7 +60,7 @@ a:hover {
 
 #logo {
   float: left;
-  margin: 10px 0 0 10px;
+  margin: 0;
   padding: 0;
 }
 
@@ -76,7 +70,7 @@ a:hover {
   font-size: 18px;
   float: left;
   letter-spacing: 2.4px;
-  margin: 45px 0 0 45px;
+  margin: 30px 0 0 30px;
   padding: 0;
   color: white;
   text-transform: uppercase;
@@ -104,9 +98,7 @@ a:hover {
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #56001B;
-  background-image: url(body-bg.jpg);
-  background-size: auto 100%;
-  background-repeat: repeat-x;
+  background-image: none;
   min-height: 156px;
   color: white;
 }
@@ -162,9 +154,12 @@ a:hover {
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
 }
+
 /* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+/* Some institutions are requesting this remain unhidden
 #scopesList { display: none; }
 .EXLSearchFieldRibbonFormSearchFor { width: 96% }
+*/
 
 /* add the novanet logo */
 #exlidSearchTile {
