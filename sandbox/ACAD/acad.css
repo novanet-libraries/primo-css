@@ -46,6 +46,8 @@ a:hover {
 
 
 #exlidHeaderContainer {
+  background-image: url(http://library.acadiau.ca/gifs/header_bgPrimo.jpg);
+  background-repeat: repeat-x;
   background-color: #56001B;
 }
 
