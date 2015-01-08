@@ -392,4 +392,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 /* static content on home page has default font-size of 80%. */
 #exlidHomeContainer {
   font-size: 100%;
+  width: 90%;
+  min-width: 40em;
+  max-width: 76em;
 }
