@@ -388,3 +388,8 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 .EXLFacetContainer h4 {
 	color: #272727;
 }
+
+/* static content on home page has default font-size of 80%. */
+#exlidHomeContainer {
+  font-size: 100%;
+}
