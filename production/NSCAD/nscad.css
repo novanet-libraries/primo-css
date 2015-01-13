@@ -162,8 +162,12 @@ a:hover {
   background-image: url(logo-for-search-tile-200x67.png), linear-gradient(#F7F9F9, #D8DEE3, #F4F7F8);
   background-repeat: no-repeat, repeat-x;
   background-size: contain;
-  padding-left: 130px;
 }
+#exlidSearchRibbon {
+  margin-left: 130px;
+}
+
+
 /* Quicksand is our 'Novanet' font */
 #exlidSearchTileWrapper {
  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
