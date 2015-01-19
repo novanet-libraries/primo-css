@@ -133,34 +133,7 @@
 #footerEXL a:hover {
   text-decoration: none;
 }
-#fixed-live-help {
-  position: fixed;
-  left: 80%;
-  bottom: 10px;
-  border: 2px solid white;
-  border-radius: 0.3em;
-  padding: 0 0.4em 0.1em 0.2em;
-  font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  font-size: 21px;
-  letter-spacing: -1px;
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
-  color: white;
-  box-shadow: 0 0 2px 2px #0075b0;
-  cursor: pointer;
-  white-space: nowrap;
-}
-#fixed-live-help span {
-  display: inline;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-#live-help-logo {
-  display: inline;
-  vertical-align: middle;
-  height: 1em;
-  width: auto;
-}
+
 
 /* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
 

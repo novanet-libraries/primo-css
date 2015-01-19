@@ -14,14 +14,16 @@
   cursor: pointer;
   white-space: nowrap;
 }
-#fixed-live-help > .logo {
+#fixed-live-help-text {
   display: inline;
   vertical-align: middle;
   height: 1em;
   width: auto;
 }
-#fixed-live-help > .label {
+#fixed-live-help-logo {
   display: inline;
   vertical-align: middle;
+  height: 1em;
+  width: auto;
   white-space: nowrap;
 }
