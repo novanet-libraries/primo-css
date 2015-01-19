@@ -37,9 +37,20 @@ a:hover {
 /* --- To remove RSS image from search box --- */
 #exlidSearchBanner, .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;}
 
+#exlidMainMenuTile {
+    clear: right;
+    float: right;
+    margin-bottom: 0;
+    /* margin-top: 0.8em; */
+    vertical-align: text-top;
+    width: 49em;
+}
+
+
 /* --- To remove Last Update line ---*/
 .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;} 
-#exlidMainMenuTile div.EXLMainMenuContainer {float:right; width:40em}
+#exlidMainMenuTile div.EXLMainMenuContainer {float: left;width: 40em;}
+
 
 /*--- To remove last bar on first row of footer ---*/
 .EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:1px solid #FFFFFF; }
@@ -80,15 +91,18 @@ a:hover {
 /*--- To expand the header image area --- */
 #exlidHeaderTile{width:100%;}
 .EXLSearchWrapper{clear:both;}
-#exlidMainMenuTile {display:none;}
+//#exlidMainMenuTile {display:none;}
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
+
+
+
 #logo {
-  float: left;
-  margin: 1em;
-  padding: 0;
+    float: left;
+    margin: 1em 0 0 1em;
+    padding: 0;
 }
 
 #header-links {
@@ -114,6 +128,14 @@ a:hover {
 #header-links a:hover {
   color: #f2ac00;
   text-decoration: none;
+}
+
+/* ----------------------------------------------- Content ----------------------------------------------- */
+#exlidHomeContainer div.EXLHomeBlockContainer1 div.EXLContentBlock2 {
+    float: left;
+    margin-left: 2em;
+    padding-left: 1em;
+    width: 30em;
 }
 
 /* ----------------------------------------------- FOOTER ----------------------------------------------- */
@@ -202,6 +224,7 @@ a:hover {
   background-image: url("logo-for-search-tile-200x67.png"), linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
   background-repeat: no-repeat, repeat-x;
   background-size: contain;
+  padding-left:0px;
 }
 #exlidSearchRibbon {
   margin-left: 130px;
