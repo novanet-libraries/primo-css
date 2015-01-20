@@ -69,8 +69,13 @@
   width: 14%;
 }
 
+/*-------------------------------     FACETS       -----------------------------------------------*/
 
-/*---------------------------------- FACETS 'More Options' lightbox ------------------------------*/
+/* Nobody finds this useful */
+#exlidSuggestedList { display: none; }
+
+
+/*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
 
 #exlidFacetsLightboxContainer a.EXLSubmit {
   background-color: #0075b0;
