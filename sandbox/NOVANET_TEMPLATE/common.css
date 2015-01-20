@@ -53,6 +53,7 @@
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {height:180px;}
 
 /* -- default for this was '96%', which wrapped it to the next line,
       but didn't push following line down, putting it "behind" the sumbit button. -- */
@@ -88,7 +89,7 @@
 /* ------------------------------------ MY ACCOUNT ---------------------------------------------- */
 
 /* --- To remove "o" from left side of e-shelf ---*/
-.offstage {display:none;} #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbon {height:180px;}
+.offstage {display:none;}
 
 /*--- To remove the My Databases tab in My Account ----*/
 #exlidMyDatabasesTab {display:none;}
