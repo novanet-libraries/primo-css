@@ -1,17 +1,5 @@
 /* ----------------------------------------------- GENERAL --------------------------------------------------*/
 
-@font-face {
-  font-family 'QuicksandBook';
-  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
-    src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.woff2') format('woff2'),
-         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont') format('woff'),
-         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.ttf') format('truetype'),
-         url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.svg#quicksandbook') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 a:link,
 a:visited {
  color: #272727;
@@ -39,7 +27,7 @@ a:hover {
 
 /* --- To remove Last Update line ---*/
 .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;} 
-#exlidMainMenuTile div.EXLMainMenuContainer {float:right; width:40em}
+#exlidMainMenuTile div.EXLMainMenuContainer {float: left;width: 40em;}
 
 /*--- To remove last bar on first row of footer ---*/
 .EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:1px solid #FFFFFF; }
@@ -85,10 +73,13 @@ a:hover {
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
+
+
+
 #logo {
-  float: left;
-  margin: 1em;
-  padding: 0;
+    float: left;
+    margin: 1em 0 0 1em;
+    padding: 0;
 }
 
 #header-links {
@@ -105,7 +96,7 @@ a:hover {
 #header-links a:visited  {
   color: #707372;
   text-decoration: none;
-  background: url("http://util-dev.library.dal.ca/advanced_search/bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
+  background: url("bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
   font-size: 0.63em;
   font-weight: bold;
   padding: 14px 10px 13px 21px;
@@ -114,6 +105,14 @@ a:hover {
 #header-links a:hover {
   color: #f2ac00;
   text-decoration: none;
+}
+
+/* ----------------------------------------------- Content ----------------------------------------------- */
+#exlidHomeContainer div.EXLHomeBlockContainer1 div.EXLContentBlock2 {
+    float: left;
+    margin-left: 2em;
+    padding-left: 1em;
+    width: 30em;
 }
 
 /* ----------------------------------------------- FOOTER ----------------------------------------------- */
@@ -136,7 +135,7 @@ a:hover {
 #footerEXL a:visited {
   color: #707372;
   text-decoration: none;
-  background: url("http://util-dev.library.dal.ca/advanced_search/bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
+  background: url("bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
   font-size: 0.63em;
   font-weight: bold;
   padding: 14px 10px 13px 21px;
@@ -146,95 +145,6 @@ a:hover {
   text-decoration: none;
  }
  
-#fixed-live-help {
-  position: fixed;
-  left: 80%;
-  bottom: 10px;
-  border: 2px solid white;
-  border-radius: 0.3em;
-  padding: 0 0.4em 0.1em 0.2em;
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
-  color: white;
-  box-shadow: 0 0 2px 2px #0075b0;
-  cursor: pointer;
-}
-#fixed-live-help span {
-  display: inline;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-#live-help-logo {
-  display: inline;
-  vertical-align: middle;
-  height: 1em;
-  width: auto;
-}
-
-/* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
-
-/*--- To change width of advanced search button ---*/
-#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
-
-/* -- default for this was '96%', which wrapped it to the next line, but didn't push following line down, putting it "behind" the sumbit button. -- */
-.EXLSearchFieldRibbonFormSearchFor.EXLSearchFieldRibbonFormBrowseSearchFor {
-  width: 32em;
-}
-
-#exlidFacetsLightboxContainer a.EXLSubmit {
-  background-color: #0075b0;
-/*  background-image: linear-gradient(#5189AA, #245980); */
-  background-image: linear-gradient(#30A5e0, #0075b0);  
-}
-.EXLFacetsLightboxTabsRibbon {
-  border-bottom: 2px solid #0075b0;
-}
-
-/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
-/* This only applies to the other views, not Dal's
-#scopesList { display: none; }
-.EXLSearchFieldRibbonFormSearchFor { width: 96% }
-*/
-
-/* add the novanet logo */
-#exlidSearchTile {
-  background-color: lightgrey;
-  background-image: url("logo-for-search-tile-200x67.png"), linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
-  background-repeat: no-repeat, repeat-x;
-  background-size: contain;
-}
-#exlidSearchRibbon {
-  margin-left: 130px;
-}
-
-
-/* Quicksand is our 'Novanet' font */
-#exlidSearchTileWrapper {
- font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-}
-/* undo the 'Quicksand' font for the actual form fields / labels */
-.EXLSearchFieldRibbonPreFilters {
-  font-family: Arial, Verdana, Helvetica, sans-serif;
-}
-#exlidSearchTileWrapper a:link,
-#exlidSearchTile a:visited { color: #0075b0; }
-/* color the Search button blue */
-#exlidSearchTileWrapper input.submit {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
-  padding-left: 0.2em;
-  padding-right: 0.2em;  background-color: #0075b0;
-/*  background-image: linear-gradient(#5189AA, #245980); */
-  background-image: linear-gradient(#30A5e0, #0075b0);
-}
-
-/* 'Rechercher' is longer than 'Search', so widen the button a little */
-/*  (the default is 91% / 9%  at the time of writing this.)           */
-.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormFields {
-  width: 86%;
-}
-.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormSubmitSearch {
-  width: 14%;
-}
 
 
 /* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
@@ -327,30 +237,6 @@ a:hover {
 .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:block; width:1%; }
 html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:table-cell; }
 
-/* ----------------------------------------------- MY ACCOUNT ----------------------------------------------- */
-
-/* --- To remove "o" from left side of e-shelf ---*/
-.offstage {display:none;} #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbon {height:180px;}
-
-/*--- To remove the My Databases tab in My Account ----*/
-#exlidMyDatabasesTab {display:none;}
-
-.EXLMyAccountTabsRibbon {
-  border-bottom: 2px solid #0075b0;
-}
-.EXLMyAccountTabsRibbon div li.EXLMyAccountSelectedTab {
-  border: 1px solid #0075b0;
-  border-bottom: 2px solid #0075b0;
-  background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);
-}
-
-/* --- Hide the List of Historic Loans --- */
-/* this is a temporary measure while we actually purge the list of historic loans */
-.EXLMyAccountMainHeaderTitle a[href*="type=history"],
-.EXLMyAccountMainHeaderTitle div.EXLMyAccountMainHeaderContent span.EXLMyAccountMainHeaderContentSeparator {
-  display: none;
-}
 
 /* Breadcrumb from Dal.ca */
 .breadcrumb dd {
@@ -365,7 +251,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 }
 
 .breadcrumb dd a, .breadcrumb dd a:link, .breadcrumb dd a:visited {
-    background: url("http://libraries.dal.ca/etc/designs/dalhousie/clientlibs/global/default-css/images/div-breadcrumb.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    background: url("div-breadcrumb.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
     color: #707372;
     font-weight: normal;
     padding-right: 1em;
@@ -391,4 +277,11 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 /* Facets */
 .EXLFacetContainer h4 {
 	color: #272727;
+}
+
+/* static content on home page has default font-size of 80%. */
+#exlidHomeContainer {
+  font-size: 100%;
+  width: 90%;
+  min-width: 40em;
 }
