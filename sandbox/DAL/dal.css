@@ -37,20 +37,9 @@ a:hover {
 /* --- To remove RSS image from search box --- */
 #exlidSearchBanner, .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;}
 
-#exlidMainMenuTile {
-    clear: right;
-    float: right;
-    margin-bottom: 0;
-    /* margin-top: 0.8em; */
-    vertical-align: text-top;
-    width: 49em;
-}
-
-
 /* --- To remove Last Update line ---*/
 .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;} 
 #exlidMainMenuTile div.EXLMainMenuContainer {float: left;width: 40em;}
-
 
 /*--- To remove last bar on first row of footer ---*/
 .EXLFooterTile li { float:left; text-indent:0.5em; padding-right:0.8em; border-right:1px solid #FFFFFF; }
@@ -91,7 +80,7 @@ a:hover {
 /*--- To expand the header image area --- */
 #exlidHeaderTile{width:100%;}
 .EXLSearchWrapper{clear:both;}
-//#exlidMainMenuTile {display:none;}
+#exlidMainMenuTile {display:none;}
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
@@ -119,7 +108,7 @@ a:hover {
 #header-links a:visited  {
   color: #707372;
   text-decoration: none;
-  background: url("http://util-dev.library.dal.ca/advanced_search/bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
+  background: url("bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
   font-size: 0.63em;
   font-weight: bold;
   padding: 14px 10px 13px 21px;
@@ -158,7 +147,7 @@ a:hover {
 #footerEXL a:visited {
   color: #707372;
   text-decoration: none;
-  background: url("http://util-dev.library.dal.ca/advanced_search/bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
+  background: url("bullet-arrow.gif") no-repeat scroll 12px 1.3em rgba(0, 0, 0, 0);
   font-size: 0.63em;
   font-weight: bold;
   padding: 14px 10px 13px 21px;
@@ -224,8 +213,8 @@ a:hover {
   background-image: url("logo-for-search-tile-200x67.png"), linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
   background-repeat: no-repeat, repeat-x;
   background-size: contain;
-  padding-left:0px;
 }
+
 #exlidSearchRibbon {
   margin-left: 130px;
 }
@@ -388,7 +377,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 }
 
 .breadcrumb dd a, .breadcrumb dd a:link, .breadcrumb dd a:visited {
-    background: url("http://libraries.dal.ca/etc/designs/dalhousie/clientlibs/global/default-css/images/div-breadcrumb.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    background: url("div-breadcrumb.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
     color: #707372;
     font-weight: normal;
     padding-right: 1em;
