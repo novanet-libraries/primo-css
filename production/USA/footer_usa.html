@@ -12,65 +12,17 @@
 -->
   </ul>
 
-  <div id="fixed-live-help" jid="novanet@chat.libraryh3lp.com">
-    <div style="position:relative">
-      <img id="live-help-logo" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/mstile-144x144.png" alt="novanet logo"/>
-      <span class="translate" data-translate='{"en_US":"Ask A Librarian!"}'></span>
-    </div>
-  </div>
 </div>
 
-<script type="text/javascript" src="//libraryh3lp.com/js/libraryh3lp.js?multi"></script>
-<script type="text/javascript">
-//<![CDATA[
-  // add the 'Ask a Librarian!' thing.
-  
-  novanet.livehelp_url = (function(){
-    var base = 'https://libraryh3lp.com/chat/novanet@chat.libraryh3lp.com',
-        skin = '10162',
-        theme = 'gota',
-        title = 'Live Help',
-        identity = 'Librarian',
-        css = 'https://sites.stfx.ca/library/sites/sites.stfx.ca.library/files/libraryh3lp.css',
-        url = '';
-        
-    url = base + '?';
-    url += 'skin='      + encodeURIComponent(skin);
-    url += '&theme='    + encodeURIComponent(theme);
-    url += '&title='    + encodeURIComponent(title);
-    url += '&identity=' + encodeURIComponent(identity);
-    url += '&css='      + encodeURIComponent(css);
-    return url;    
-  })();
-
-  $(document).ready(function(){
-    $('#fixed-live-help').on('click', function(evt){
-      evt.stopPropagation();
-      if (novanet.livehelp_window && !novanet.livehelp_window.closed){
-        novanet.livehelp_window.focus();
-      }
-      else{
-        novanet.livehelp_window = window.open(novanet.livehelp_url, 'Live Help', 'resizable=1,width=300,height=300,top:300,left:300');
-      }
-    });
-  });
-  
-// ]]>
-</script>
-
-<!-- uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js -->
-<script type="text/javascript" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/uri.js"></script>
 <script type="text/javascript">
 // <![CDATA[ 
+  novanet = novanet || {};
   novanet.translate = novanet.translate || {};
   var t = novanet.translate;
   t.currentLang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr_FR' : 'en_US';
   t.otherLang = t.currentLang == 'fr_FR' ? 'en_US' : 'fr_FR';
   t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Français' : 'English';
-  t.otherLangURI = new URI();
-  t.otherLangURI.search(function(searchParams){
-    searchParams.prefLang = t.otherLang;
-  });
+  t.otherLangURI = new URI().addSearch('prefLang', t.otherLang);
   t.$changeLang = $('<li>').append(
     $('<a>').attr('href', t.otherLangURI.href()).html(t.otherLangLabel)
   ).insertAfter('#exlidMyAccount');

@@ -166,6 +166,11 @@ a:hover {
   color: #ff0;
 }
 
+/* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
+
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
 
 /* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
 

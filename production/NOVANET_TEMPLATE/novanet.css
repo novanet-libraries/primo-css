@@ -122,6 +122,14 @@
 #footerEXL a:hover {
   text-decoration: none;
 }
+
+/* ----------------------------------------------- SEARCH AND SCOPES----------------------------------------------- */
+
+/* Hide the scopes limiter on the Simple Search (leave it on the Advanced Search) */
+#scopesList { display: none; }
+.EXLSearchFieldRibbonFormSearchFor { width: 96% }
+
+
 /* ----------------------------------------------- BRIEF RESULTS ----------------------------------------------- */
 
 /* hide the Show bX Hot Articles thing */
