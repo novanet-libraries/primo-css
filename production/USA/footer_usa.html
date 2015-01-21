@@ -22,7 +22,7 @@
   t.currentLang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr_FR' : 'en_US';
   t.otherLang = t.currentLang == 'fr_FR' ? 'en_US' : 'fr_FR';
   t.otherLangLabel = t.otherLang == 'fr_FR' ? 'Français' : 'English';
-  t.otherLangURI = new URI().addSearch('prefLang', t.otherLang);
+  t.otherLangURI = new URI().removeSearch('prefLang').addSearch('prefLang', t.otherLang);
   t.$changeLang = $('<li>').append(
     $('<a>').attr('href', t.otherLangURI.href()).html(t.otherLangLabel)
   ).insertAfter('#exlidMyAccount');
