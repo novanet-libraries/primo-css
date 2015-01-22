@@ -86,7 +86,10 @@
   border-bottom: 2px solid #0075b0;
 }
 
-/* ------------------------------------ MY ACCOUNT ---------------------------------------------- */
+/* ------------------------------------ MY ACCOUNT ---------------------------------------------
+   this should be in 'common.css', but the My Account pages don't
+   import the custom tile that includes 'common.css'.
+   ---------------------------------------------------------------------------------------------  */
 
 /* --- To remove "o" from left side of e-shelf ---*/
 .offstage {display:none;}

@@ -278,10 +278,13 @@ a:hover {
 .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:block; width:1%; }
 html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:table-cell; }
 
-/* ----------------------------------------------- MY ACCOUNT ----------------------------------------------- */
+/* ------------------------------------ MY ACCOUNT ---------------------------------------------
+   this should be in 'common.css', but the My Account pages don't
+   import the custom tile that includes 'common.css'.
+   ---------------------------------------------------------------------------------------------  */
 
 /* --- To remove "o" from left side of e-shelf ---*/
-.offstage {display:none;} #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbon {height:180px;}
+.offstage {display:none;}
 
 /*--- To remove the My Databases tab in My Account ----*/
 #exlidMyDatabasesTab {display:none;}
