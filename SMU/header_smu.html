@@ -12,3 +12,226 @@
   |
   <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Help</a>
 </div>
+
+
+<!-- temporarily re-adding things I had refactored into common.html -->
+<style type="text/css">
+// <![CDATA[
+
+/* Most CSS that is common to all views is found here. */
+
+@font-face {
+  font-family 'QuicksandBook';
+  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
+  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.woff2') format('woff2'),
+       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont') format('woff'),
+       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.ttf') format('truetype'),
+       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.svg#quicksandbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* --------------------------------  SEARCH TILE -------------------------------------------------*/
+
+
+/* add the novanet logo */
+#exlidSearchTile {
+  background-color: lightgrey;
+  background-image: url(logo-for-search-tile-200x67.png), linear-gradient(#F7F9F9, #D8DEE3, #F4F7F8);
+  background-repeat: no-repeat, repeat-x;
+  background-size: contain;
+}
+/* make room for the logo */
+#exlidSearchRibbon {
+  margin-left: 130px;
+}
+/* Quicksand is our 'Novanet' font */
+#exlidSearchTileWrapper {
+ font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+}
+/* undo the 'Quicksand' font for the actual form fields / labels */
+.EXLSearchFieldRibbonPreFilters {
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
+}
+
+#exlidSearchTileWrapper a:link,
+#exlidSearchTileWrapper a:visited {
+  color: #0075b0;
+}
+
+/* color the Search button blue */
+#exlidSearchTileWrapper input.submit {
+  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
+
+/*--- To change width of advanced search button ---*/
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {height:180px;}
+
+/* -- default for this was '96%', which wrapped it to the next line,
+      but didn't push following line down, putting it "behind" the sumbit button. -- */
+.EXLSearchFieldRibbonFormBrowseSearchFor {
+  width: 32em;
+}
+
+/* 'Rechercher' is longer than 'Search', so widen the button a little */
+/*  (the default is 91% / 9%  at the time of writing this.)           */
+.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormFields {
+  width: 86%;
+}
+.EXLCurrentLang_fr_FR #exlidSearchTileWrapper .EXLSearchFieldRibbonFormSubmitSearch {
+  width: 14%;
+}
+
+/*-------------------------------     FACETS       -----------------------------------------------*/
+
+/* Nobody finds this useful */
+#exlidSuggestedList { display: none; }
+
+
+/*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
+
+#exlidFacetsLightboxContainer a.EXLSubmit {
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);  
+}
+.EXLFacetsLightboxTabsRibbon {
+  border-bottom: 2px solid #0075b0;
+}
+
+/* ------------------------------------ MY ACCOUNT ---------------------------------------------
+   this should be in 'common.css', but the My Account pages don't
+   import the custom tile that includes 'common.css'.
+   ---------------------------------------------------------------------------------------------  */
+
+/* --- To remove "o" from left side of e-shelf ---*/
+.offstage {display:none;}
+
+/*--- To remove the My Databases tab in My Account ----*/
+#exlidMyDatabasesTab {display:none;}
+
+.EXLMyAccountTabsRibbon {
+  border-bottom: 2px solid #0075b0;
+}
+.EXLMyAccountTabsRibbon div li.EXLMyAccountSelectedTab {
+  border: 1px solid #0075b0;
+  border-bottom: 2px solid #0075b0;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
+
+/* --- Hide the List of Historic Loans --- */
+/* this is a temporary measure while we actually purge the list of historic loans */
+.EXLMyAccountMainHeaderTitle a[href*="type=history"],
+.EXLMyAccountMainHeaderTitle div.EXLMyAccountMainHeaderContent span.EXLMyAccountMainHeaderContentSeparator {
+  display: none;
+}
+// ]]>
+</style>
+<!-- uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js -->
+<script type="text/javascript" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/uri.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+//All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
+
+var novanet = novanet || {};
+
+novanet.params = new URI().search(true);
+novanet.current_view = novanet.params.vid || 'NOVANET';
+novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
+novanet.$head = $('head');
+novanet.headElements = [];  //an array of DOMElements we will add to the <head> node at the end of this script.
+
+//remove Ex Libris apple-touch-icon
+$("link[rel=apple-touch-icon]").remove();
+
+//add our own favicon
+novanet.headElements.push(
+  $('<link>').attr({
+    rel: 'shortcut icon',
+    href: 'http://www.novanet.ns.ca/favicon.ico'
+  }).get()
+);
+
+
+//add Novanet apple-touch-icons
+$.each(['57', '114', '72', '144', '60', '120', '76', '152', '180'], function(idx, s){
+  var szstring = s + 'x' + s;
+  novanet.headElements.push(
+    $('<link>').attr({
+      rel:   'apple-touch-icon',
+      sizes: szstring,
+      href: novanet.upload_folder + '/apple-touch-icon-' + szstring + '.png'
+    }).get()
+  );  
+});
+
+//add .png favicons for those browsers that can take higher-res versions.
+//the order of the sizes array is important, especially the first and last elements.
+$.each(['192', '160', '96', '16', '32'], function(idx, s){
+  var szstring = s + 'x' + s;
+  novanet.headElements.push(
+    $('<link>').attr({
+      rel  : 'icon',
+      sizes: szstring,
+      href : novanet.upload_folder + '/favicon-' + szstring + '.png'
+    }).get()
+  );
+});
+
+//add some msapplication crap for "Pinned Sites"
+var metas = [
+{name: 'application-name', content: 'Novanet'},
+{name: 'msapplication-TileColor', content: '#2d89ef'},
+{name: 'msapplication-TileImage', content: novanet.upload_folder + '/mstile-144x144.png'},
+{name: 'msapplication-starturl', content: '/primo_library/libweb/action/search.do?&vid=' + novanet.current_view},
+{name: 'msapplication-tooltip', content: 'Search Novanet'},
+{name: 'msapplication-task', content: 'name=New Search;action-uri=/primo_library/libweb/action/search.do?&vid=' + novanet.current_view + ';icon-uri=/link to magnifying glass'},
+{name: 'msapplication-config', content: novanet.upload_folder + '/browserconfig.xml'}
+];
+$.each(metas, function(idx, attrs){
+  novanet.headElements.push(
+    $('<meta>').attr(attrs).get()
+  );
+});
+
+//add all the new elements to the DOM:
+novanet.$head.append(novanet.headElements);
+
+// ]]>
+</script>
+
+<script>
+// <![CDATA[
+// Google Analytics
+
+  //edit document title so that GA counts different parts of Primo as distinct pages.
+  if (location.search.indexOf('mode=Advanced') > -1){
+    if (document.title.indexOf('Search') > -1){
+      document.title.replace('Search', 'Advanced Search');
+    }else{
+      document.title = 'Novanet - Advanced Search';
+    }
+  }
+  if (location.pathname.indexOf('myAccountMenu.do') > -1 ||
+      location.pathname.indexOf('basket.do') > -1 ||
+      location.pathname.indexOf('uery.do') > -1
+     ){
+    document.title = 'Novanet - My Account';
+  }
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58780645-1', 'auto');
+  ga('send', 'pageview');
+// ]]>
+</script>
