@@ -189,7 +189,16 @@ a:hover {
 .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:block; width:1%; }
 html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: middle; display:table-cell; }
 
-/* ------------------------------------ MY ACCOUNT ---------------------------------------------
+/* ------------------------------------ MY ACCOUNT ---------------------------------------------  */
+
+/*  hide edit my profile in NSCC view
+    NSCC users must have NSCC-assigned email addresses configured in Aleph */
+.EXLMyAccountEditLink {
+  display: none;
+}
+
+
+/* ------------------------------------------------------------------------------------------------
    this should be in 'common.css', but the My Account pages don't
    import the custom tile that includes 'common.css'.
    ---------------------------------------------------------------------------------------------  */
