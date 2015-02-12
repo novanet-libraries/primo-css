@@ -15,8 +15,8 @@
 //All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
 
 var novanet = novanet || {};
-
-novanet.params = new URI().search(true);
+novanet.uri = new URI();
+novanet.params = novanet.uri.search(true);
 novanet.current_view = novanet.params.vid || 'NOVANET';
 novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
 novanet.$head = $('head');
@@ -120,5 +120,29 @@ novanet.$head.append(novanet.headElements);
   //    $this.attr('href', $this.attr('href').replace('dlSearch.do', 'search.do'));
   //  });
   //}
+// ]]>
+</script>
+
+<!-- add an indicator on the page when we are in sandbox. -->
+<div id="novanet-sandbox-indicator" style="display:none">
+<header>SANDBOX SERVER</header>
+<span class="info" style="display:none">
+  This is a forum for experimenting with new settings for the Primo site.
+  The production version of this page can be found here: <a class="live-link">Novanet Primo</a>
+</span>
+</div>
+<script>
+// <![CDATA[
+  var novanet = novanet || {};
+  if (!novanet.uri){
+    novanet.uri = new URI();
+  }
+  if (novanet.uri.hostname().substr(0,12) == 'nova-primosb'){
+    var liveLink = novanet.uri.hostname(novanet.uri.hostname().replace('nova-primosb','novanet-primo'));
+    var div = $('#novanet-sandbox-indicator');
+    div.find('.live-link').attr('href', liveLink);
+    div.find('header').on('click', function(){ div.find('.info').toggle(); });
+    div.show();
+  }
 // ]]>
 </script>
