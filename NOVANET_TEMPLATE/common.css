@@ -13,6 +13,37 @@
   font-style: normal;
 }
 
+#novanet-sandbox-indicator {
+  display:none; /* javascript changes this when we are in sandbox */
+  position:fixed;
+  top:25px;
+  right:0;
+  width: 20em;
+  max-width: 50%;
+  padding:0.5em;
+  background-color:white;
+  color: black;
+  opacity: 0.5;
+}
+#novanet-sandbox-indicator:hover {
+  opacity: 1;
+}
+#novanet-sandbox-indicator header {
+  font-family:impact,sans-serif;
+  font-weight:bold;
+  font-size: 125%;
+  background-color: transparent;
+  color: black;
+  opacity: 1;
+  cursor: pointer;
+}
+#novanet-sandbox-indicator .info {
+  font-family:verdana,arial,helvetica,sans-serif;
+  font-size:90%;
+  background-color: transparent;
+  color: black;
+  opacity: 1;
+}
 
 /* --------------------------------  SEARCH TILE -------------------------------------------------*/
 
