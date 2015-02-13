@@ -215,6 +215,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 
 /* Most CSS that is common to all views is found here. */
+
 /*
 @font-face {
   font-family: 'QuicksandBook';
@@ -229,6 +230,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 }
 */
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+
 
 /* --------------------------------  SEARCH TILE -------------------------------------------------*/
 
