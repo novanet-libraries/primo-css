@@ -31,3 +31,107 @@
   </a>
 </div>
 
+
+<!-- temporarily re-adding things I had refactored into common.html -->
+
+<!-- uri.js from http://medialize.github.io/URI.js/ or https://github.com/medialize/URI.js -->
+<script type="text/javascript" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/uri.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+//All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
+
+var novanet = novanet || {};
+
+novanet.params = new URI().search(true);
+novanet.current_view = novanet.params.vid || 'NOVANET';
+novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
+novanet.$head = $('head');
+novanet.headElements = [];  //an array of DOMElements we will add to the <head> node at the end of this script.
+
+//remove Ex Libris apple-touch-icon
+$("link[rel=apple-touch-icon]").remove();
+
+//add our own favicon
+novanet.headElements.push(
+  $('<link>').attr({
+    rel: 'shortcut icon',
+    href: 'http://www.novanet.ns.ca/favicon.ico'
+  }).get()
+);
+
+
+//add Novanet apple-touch-icons
+$.each(['57', '114', '72', '144', '60', '120', '76', '152', '180'], function(idx, s){
+  var szstring = s + 'x' + s;
+  novanet.headElements.push(
+    $('<link>').attr({
+      rel:   'apple-touch-icon',
+      sizes: szstring,
+      href: novanet.upload_folder + '/apple-touch-icon-' + szstring + '.png'
+    }).get()
+  );  
+});
+
+//add .png favicons for those browsers that can take higher-res versions.
+//the order of the sizes array is important, especially the first and last elements.
+$.each(['192', '160', '96', '16', '32'], function(idx, s){
+  var szstring = s + 'x' + s;
+  novanet.headElements.push(
+    $('<link>').attr({
+      rel  : 'icon',
+      sizes: szstring,
+      href : novanet.upload_folder + '/favicon-' + szstring + '.png'
+    }).get()
+  );
+});
+
+//add some msapplication crap for "Pinned Sites"
+var metas = [
+{name: 'application-name', content: 'Novanet'},
+{name: 'msapplication-TileColor', content: '#2d89ef'},
+{name: 'msapplication-TileImage', content: novanet.upload_folder + '/mstile-144x144.png'},
+{name: 'msapplication-starturl', content: '/primo_library/libweb/action/search.do?&vid=' + novanet.current_view},
+{name: 'msapplication-tooltip', content: 'Search Novanet'},
+{name: 'msapplication-task', content: 'name=New Search;action-uri=/primo_library/libweb/action/search.do?&vid=' + novanet.current_view + ';icon-uri=/link to magnifying glass'},
+{name: 'msapplication-config', content: novanet.upload_folder + '/browserconfig.xml'}
+];
+$.each(metas, function(idx, attrs){
+  novanet.headElements.push(
+    $('<meta>').attr(attrs).get()
+  );
+});
+
+//add all the new elements to the DOM:
+novanet.$head.append(novanet.headElements);
+
+// ]]>
+</script>
+
+<script>
+// <![CDATA[
+// Google Analytics
+
+  //edit document title so that GA counts different parts of Primo as distinct pages.
+  if (location.search.indexOf('mode=Advanced') > -1){
+    if (document.title.indexOf('Search') > -1){
+      document.title.replace('Search', 'Advanced Search');
+    }else{
+      document.title = 'Novanet - Advanced Search';
+    }
+  }
+  if (location.pathname.indexOf('myAccountMenu.do') > -1 ||
+      location.pathname.indexOf('basket.do') > -1 ||
+      location.pathname.indexOf('uery.do') > -1
+     ){
+    document.title = 'Novanet - My Account';
+  }
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58780645-1', 'auto');
+  ga('send', 'pageview');
+// ]]>
+</script>
