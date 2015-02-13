@@ -171,3 +171,10 @@
 .EXLMyAccountMainHeaderTitle div.EXLMyAccountMainHeaderContent span.EXLMyAccountMainHeaderContentSeparator {
   display: none;
 }
+
+.EXLMyAccountMainContainer form input.submit {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  background-color: #0075b0;
+  background-image: linear-gradient(#30A5e0, #0075b0);
+}
