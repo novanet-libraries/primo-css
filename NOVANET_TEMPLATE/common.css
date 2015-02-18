@@ -101,6 +101,18 @@
   width: 14%;
 }
 
+/* remove the logo and the margin for the logo on small screens */
+@media screen and (max-width: 500px) {
+  #exlidSearchTile {
+    background-image: linear-gradient(#f7f9f9, #d8dee3, #f4f7f8);
+  }
+  #exlidSearchRibbon{
+    margin-left: 0px;
+    background-color: #ffffff;
+  }
+}
+
+
 /*-------------------------------     FACETS       -----------------------------------------------*/
 
 /* Nobody finds this useful */
