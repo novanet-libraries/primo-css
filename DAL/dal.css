@@ -424,3 +424,24 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 	}
 
 }
+
+	/* Mobile Edits */
+@media screen and (max-width: 500px) {
+
+  .breadcrumb {
+		display: none;
+	}
+
+	#header-links {
+		display:none;
+	}
+	
+	.exlidSearchRibbon div.EXLSearchFieldRibbon{
+		background-color: #ffffff;
+	}
+	
+	.scopesList {
+		display: none;
+	}
+
+}
