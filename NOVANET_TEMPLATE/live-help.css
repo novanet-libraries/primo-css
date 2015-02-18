@@ -1,7 +1,7 @@
 #fixed-live-help {
   position: fixed;
-  left: 80%;
-  bottom: 10px;
+  right: 0.5em;
+  bottom: 0.5em;
   font-family : QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
   font-size: 21px;
   background-color: #0075b0;
@@ -27,3 +27,4 @@
   width: auto;
   white-space: nowrap;
 }
+
