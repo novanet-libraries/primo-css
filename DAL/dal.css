@@ -397,7 +397,28 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 #exlidHomeContainer {
   font-size: 100%;
   width: 90%;
-  min-width: 40em;
+  min-width: 0em;
+}
+
+	/* Mobile Edits */
+@media screen and (max-width: 500px) {
+
+  .breadcrumb {
+		display: none;
+	}
+
+	#header-links {
+		display:none;
+	}
+	
+	.exlidSearchRibbon div.EXLSearchFieldRibbon{
+		background-color: #ffffff;
+	}
+	
+	.scopesList {
+		display: none;
+	}
+
 }
 
 
