@@ -170,6 +170,10 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
    import the custom tile that includes 'common.css'.
    ---------------------------------------------------------------------------------------------  */
 
+.EXLMyAccountEditLink {
+  display: none;
+}
+
 /* --- To remove "o" from left side of e-shelf ---*/
 .offstage {display:none;}
 

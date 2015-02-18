@@ -122,6 +122,10 @@
    import the custom tile that includes 'common.css'.
    ---------------------------------------------------------------------------------------------  */
 
+.EXLMyAccountEditLink {
+  display: none;
+}
+
 /* --- To remove "o" from left side of e-shelf ---*/
 .offstage {display:none;}
 
