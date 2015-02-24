@@ -120,8 +120,10 @@ a:hover {
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
-/* --- To remove the Requests Tab (merged with "Locations" to be "Locations and Requests" --- */
+
+/* --- To remove the Requests Tab (merged with "Locations" to be "Locations and Requests"
 .EXLTabsRibbon div li.EXLRequestTab {display:none;}
+*/
 
 /* add some padding between title/link and rest of the metadata */
 .EXLSummaryContainer .EXLResultTitle { margin-bottom: 0.7em; }
