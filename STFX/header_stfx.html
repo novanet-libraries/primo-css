@@ -22,11 +22,30 @@
 <script type="text/javascript" src="/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/uri.js"></script>
 <script type="text/javascript">
 // <![CDATA[
+// set up some novanet utilities
+var novanet = novanet || {};
+novanet.page = {};
+novanet.page.hasSimpleSearch = function(){
+  return $("#exlidSearchTile.EXLSearch").length > 0;
+}
+novanet.page.hasAdvancedSearch = function(){
+  return $("#exlidAdvancedSearchTile.EXLAdvancedSearch").length > 0;  
+}
+novanet.page.hasBrowseSearch = function(){
+  return $("#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon").length > 0;
+}
+novanet.page.isMyAccount = function(){
+}
+
+novanet.uri = new URI();
+novanet.params = novanet.uri.search(true);
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
 //All this does is change the favicon from the Ex Libris Rainbow Swirl to the Novanet icon.
 
-var novanet = novanet || {};
-
-novanet.params = new URI().search(true);
 novanet.current_view = novanet.params.vid || 'NOVANET';
 novanet.upload_folder = '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE'; //do not change this per-view -- files referenced here are all stored in NOVANET_TEMPLATE
 novanet.$head = $('head');
@@ -200,4 +219,61 @@ novanet.$head.append(novanet.headElements);
   });
 
 // ]]>
+</script>
+
+
+<script>
+//<![CDATA[
+// add links / modify the search tile
+
+  if (novanet.fn.pageHasBrowseSearch()){    
+    //add a link to Advanced Search and New Search.
+    $(function(){
+      var container = $(".EXLSearchFieldRibbonFormLinks"),
+          simple = container.find('a');
+ 
+      if (a.attr('href').indexOf('vid=') < 0){
+        a.attr('href', 'search.do?vid=' + (novanet.params.vid || ''));
+      }
+      
+      if ($("#novanet-advanced-search-link").length < 1){
+        container.append(
+          $("<a>").attr({
+            href: "search.do?mode=Advanced&ct=AdvancedSearch&vid=" + (novanet.params.vid || ''),
+            id: "novanet-advanced-search-link"
+          }).html("Advanced Search")
+        );
+      }
+      
+      if ($("#novanet-new-search-link").length < 1){
+        container.append(
+          $("<a>").attr({
+            href: "search.do?fn=showBrowse&mode=BrowseSearch&vid=" + (novanet.params.vid || ''),
+            id: "novanet-new-search-link"
+          }).html("New Search")
+        );
+      }
+    });
+  }
+  else if (novanet.fn.pageHasAdvancedSearch()){
+    //add a link to Browse
+  }
+  else if (novanet.fn.pageHasSimpleSearch()){
+    //add a link for a "New Search".
+    $(function(){
+      if ($("#novanet-new-search-link").length < 1){
+        $("<div>").addClass("EXLSearchFieldRibbonBrowseSearchLink").append(
+          $("<a>").attr({
+            href: "search.do?vid=" + (novanet.params.vid || ''),
+            title: "New Search",
+            id: "novanet-new-search-link"
+            }
+          ).addClass("EXLSearchFieldRibbonAdvancedTwoLinks").html("New Search")
+        ).insertAfter(
+          $(".EXLSearchFieldRibbonBrowseSearchLink")
+        );
+      }
+    });
+  }
+//]]>
 </script>

@@ -228,15 +228,64 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 
 /* add the novanet logo */
-#exlidSearchTile {
+#exlidAdvancedSearchTile, #exlidSearchTile {
   background-color: lightgrey;
   background-image: url(logo-for-search-tile-200x67.png), linear-gradient(#F7F9F9, #D8DEE3, #F4F7F8);
   background-repeat: no-repeat, repeat-x;
-  background-size: contain;
+  background-size: 200px 67px, contain;
 }
 /* make room for the logo */
 #exlidSearchRibbon {
   margin-left: 130px;
+}
+#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon {
+  margin: 1em 0 1em 160px;
+  width: auto;
+}
+
+/* browse search fields */
+#exlidAdvancedSearchRibbon div.EXLBrowseFieldRibbon {
+  display:inline;
+  background-color: transparent;
+  clear:none;
+  border:none;
+  padding: 0;
+  width: auto;
+}
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormFields {
+  background-color: white;
+  width: auto;
+  display:inline;
+}
+#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon .EXLSearchFieldRibbonFormLinks {
+  margin-top: -0.7em;
+}
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormBrowseSearchFor {
+  border-right: none;
+}
+#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch {
+  clear:none;
+  display:inline;
+  border-left: none;
+  margin-top: 0;
+}
+#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch input.submit {
+  height: 26px;
+}
+#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormLinks a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: normal;
+}
+/*small font size adjustment*/
+.EXLSearchFieldRibbonAdvancedSearchLink a.EXLSearchFieldRibbonAdvancedTwoLinks {
+	padding-top: 0.4em;
+	font-size: 100%;
+}
+.EXLSearchFieldRibbonBrowseSearchLink a {
+	font-size: 100%;
 }
 /* Quicksand is our 'Novanet' font */
 #exlidSearchTileWrapper {
