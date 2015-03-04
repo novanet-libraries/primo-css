@@ -233,13 +233,17 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
   background-image: url(logo-for-search-tile-200x67.png), linear-gradient(#F7F9F9, #D8DEE3, #F4F7F8);
   background-repeat: no-repeat, repeat-x;
   background-size: 200px 67px, contain;
+  position: relative;
 }
 /* make room for the logo */
 #exlidSearchRibbon {
   margin-left: 130px;
 }
-#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon {
+#exlidAdvancedSearchRibbon {
   margin: 1em 0 1em 160px;
+  width: 80%;
+}
+#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon {
   width: auto;
 }
 
@@ -257,6 +261,12 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
   width: auto;
   display:inline;
 }
+#exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {
+  height: auto;
+}
+#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon {
+  width: 71em;
+}
 #exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon .EXLSearchFieldRibbonFormLinks {
   margin-top: -0.7em;
 }
@@ -271,6 +281,19 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 }
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormSubmitSearch input.submit {
   height: 26px;
+}
+#exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormLinks {
+  display:inline;
+  position:absolute;
+  top: 60px;
+  left: 20px;
+}
+#exlidAdvancedSearchRibbon.EXLAdvancedBrowseRibbon div.EXLSearchFieldRibbonFormLinks {
+  position: relative;
+  display: inline;
+  float: right;
+  top: 0;
+  left: 0;
 }
 #exlidAdvancedSearchRibbon div.EXLSearchFieldRibbonFormLinks a {
   display: block;
@@ -312,7 +335,6 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
-#exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {height:180px;}
 
 /* Advanced Search & Browse Links */
 .EXLSearchFieldRibbonAdvancedSearchLink a.EXLSearchFieldRibbonAdvancedTwoLinks {

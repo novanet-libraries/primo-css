@@ -27,7 +27,7 @@ var novanet = novanet || {};
 novanet.page = {};
 novanet.page.hasSimpleSearch = function(){
   return $("#exlidSearchTile.EXLSearch").length > 0;
-}
+};
 novanet.page.hasAdvancedSearch = function(){
   return $("#exlidAdvancedSearchTile.EXLAdvancedSearch").length > 0;  
 }
@@ -226,14 +226,14 @@ novanet.$head.append(novanet.headElements);
 //<![CDATA[
 // add links / modify the search tile
 
-  if (novanet.fn.pageHasBrowseSearch()){    
+$(function(){
+  if (novanet.page.hasBrowseSearch()){    
     //add a link to Advanced Search and New Search.
-    $(function(){
       var container = $(".EXLSearchFieldRibbonFormLinks"),
           simple = container.find('a');
  
-      if (a.attr('href').indexOf('vid=') < 0){
-        a.attr('href', 'search.do?vid=' + (novanet.params.vid || ''));
+      if (simple.attr('href').indexOf('vid=') < 0){
+        simple.attr('href', 'search.do?vid=' + (novanet.params.vid || ''));
       }
       
       if ($("#novanet-advanced-search-link").length < 1){
@@ -253,14 +253,31 @@ novanet.$head.append(novanet.headElements);
           }).html("New Search")
         );
       }
-    });
   }
-  else if (novanet.fn.pageHasAdvancedSearch()){
-    //add a link to Browse
+  else if (novanet.page.hasAdvancedSearch()){
+    //add a link to Advanced Search and New Search.
+      var container = $(".EXLSearchFieldRibbonFormLinks");
+      
+      if ($("#novanet-browse-search-link").length < 1){
+        container.append(
+          $("<a>").attr({
+            href: "search.do?fn=showBrowse&mode=BrowseSearch&vid=" + (novanet.params.vid || ''),
+            id: "novanet-browse-search-link"
+          }).html("Browse")
+        );
+      }
+      
+      if ($("#novanet-new-search-link").length < 1){
+        container.append(
+          $("<a>").attr({
+            href: "search.do?mode=Advanced&ct=AdvancedSearch&vid=" + (novanet.params.vid || ''),
+            id: "novanet-new-search-link"
+          }).html("New Search")
+        );
+      }
   }
-  else if (novanet.fn.pageHasSimpleSearch()){
+  else if (novanet.page.hasSimpleSearch()){
     //add a link for a "New Search".
-    $(function(){
       if ($("#novanet-new-search-link").length < 1){
         $("<div>").addClass("EXLSearchFieldRibbonBrowseSearchLink").append(
           $("<a>").attr({
@@ -273,7 +290,8 @@ novanet.$head.append(novanet.headElements);
           $(".EXLSearchFieldRibbonBrowseSearchLink")
         );
       }
-    });
   }
+});
+
 //]]>
 </script>
