@@ -122,7 +122,7 @@ novanet.$head.append(novanet.headElements);
   //add some event tracking as well
   $('document').ready(function(){
     //count clicks on header links
-    $('#header-links').on('click', function(evt){
+    $('#header-links').on('click', 'a', function(evt){
       ga('send', {
         hitType: 'event',
         eventCategory: novanet.current_view + ' header',
@@ -148,7 +148,7 @@ novanet.$head.append(novanet.headElements);
         hitType: 'event',
         eventCategory: 'Facet Selection',
         eventAction: 'click',
-        eventLabel: evt.delegateTarget.children('h4').first().text(),
+        eventLabel: $(evt.delegateTarget).children('h4').first().text(),
         useBeacon: true
       });
     });
