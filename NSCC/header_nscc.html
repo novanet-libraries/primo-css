@@ -112,8 +112,9 @@ novanet.$head.append(novanet.headElements);
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-58780645-1', 'auto');
-  ga('send', 'pageview');
   ga('set', 'forceSSL', true);
+  ga('set', 'dimension1', novanet.params.vid || '');
+  ga('send', 'pageview');
 
   //add some event tracking as well
   $('document').ready(function(){
