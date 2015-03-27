@@ -120,7 +120,7 @@ novanet.$head.append(novanet.headElements);
     $('#header-links').on('click', 'a', function(evt){
       ga('send', {
         hitType: 'event',
-        eventCategory: novanet.current_view + ' header',
+        eventCategory: 'Header Links',
         eventAction: 'click',
         eventLabel: $(this).text(),
         useBeacon: true
@@ -129,11 +129,21 @@ novanet.$head.append(novanet.headElements);
     $('#logo').on('click', function(evt){
       ga('send', {
         hitType: 'event',
-        eventCategory: novanet.current_view + ' header',
+        eventCategory: 'Header Links',
         eventAction: 'click',
         eventLabel: 'Logo',
         useBeacon: true
       });      
+    });
+    //count clicks on footer links
+    $('.EXLFooterLinksContainer').on('click', 'a', function(evt){
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Footer Links',
+        eventAction: 'click',
+        eventLabel: $(this).text(),
+        useBeacon: true
+      });
     });
     //count result tab switching.  could probably count this via URL parameters on display.do or dlDisplay.do.
     $('.EXLResultTabs li').on('click', function(evt){
