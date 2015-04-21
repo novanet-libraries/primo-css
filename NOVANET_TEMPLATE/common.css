@@ -1,6 +1,7 @@
 
 /* Most CSS that is common to all views is found here. */
 
+/*
 @font-face {
   font-family: 'QuicksandBook';
   src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
@@ -12,6 +13,8 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
 
 #novanet-sandbox-indicator {
   display:none; /* javascript changes this when we are in sandbox */
