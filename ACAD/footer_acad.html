@@ -14,3 +14,20 @@
 
 </div>
 <!--end footer-->
+
+<script type="text/javascript">
+//title drop down on advanced search defaults to a disabled select box.
+// hide that and just show a label.
+$titleRow = $('#exlidAdvancedSearchFieldset0');
+if ($titleRow.length > 0){
+  $titleDropDown = $titleRow.find('.EXLAdvancedSearchFormRowInlineInput').first();
+  $replacement = $('<span>').html(
+    $titleDropDown.find('option').first().text()
+  ).css({
+    display: 'inline-block',
+    width: '' + ($titleDropDown.width() - 4) + 'px'
+  }); 
+  $titleDropDown.children().hide();
+  $titleDropDown.append($replacement);
+}
+</script>
