@@ -276,6 +276,15 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 #exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
 #exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {height:180px;}
 
+/* Advanced Search & Browse Links */
+.EXLSearchFieldRibbonAdvancedSearchLink a.EXLSearchFieldRibbonAdvancedTwoLinks {
+	padding-top: 1em;
+	font-size: 100%;
+}
+.EXLSearchFieldRibbonBrowseSearchLink a {
+	font-size: 100%;
+}
+
 /* -- default for this was '96%', which wrapped it to the next line,
       but didn't push following line down, putting it "behind" the sumbit button. -- */
 .EXLSearchFieldRibbonFormBrowseSearchFor {

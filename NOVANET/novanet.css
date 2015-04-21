@@ -58,6 +58,15 @@
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
 
+/* Advanced Search & Browse Links */
+.EXLSearchFieldRibbonAdvancedSearchLink a.EXLSearchFieldRibbonAdvancedTwoLinks {
+	padding-top: 1em;
+	font-size: 100%;
+}
+.EXLSearchFieldRibbonBrowseSearchLink a {
+	font-size: 100%;
+}
+
 #top-bar-institutions {
   list-style-type: none;
   padding: 0;
