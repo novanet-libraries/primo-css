@@ -143,7 +143,7 @@ a:hover {
   min-height: 30em;
 }
 .EXLFooterTile {
-  font-family : sans-serif;
+  font-family: sans-serif;
   font-size: 18px;
   background-color: #168C4C;
   background-image: none;
@@ -285,7 +285,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 /* Most CSS that is common to all views is found here. */
 
 @font-face {
-  font-family 'QuicksandBook';
+  font-family: 'QuicksandBook';
   src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
   src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
        url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.woff2') format('woff2'),
