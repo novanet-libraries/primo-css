@@ -20,13 +20,72 @@
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
+@media screen and (max-width: 500px){
+  #novanet-sign-in, #novanet-why-sign-in, #header-links {
+    display: none !important;
+  }
+
+  /* take the novanet logo out of the search ribbon */
+  #exlidSearchRibbon {
+    margin-left: 0;
+  }
+}
+
+#novanet-sign-in {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  font-size: smaller;
+  font-family: Quicksand, QuicksandBook, Open-Sans, Verdana, Helvetica, Arial, sans-serif;
+  padding: 0.2em;
+  text-align: center;
+  z-index: 1000;
+}
+#novanet-sign-in h1,
+#novanet-sign-in p {
+  margin: 0;
+}
+#novanet-why-sign-in {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 32%;
+  width: 32%;
+  min-width: 20em;
+  background-color: white;
+  border: 1px solid grey;
+  color: grey;
+  font-family: Quicksand, QuicksandBook, Open-Sans, Verdana, Helvetica, Arial, sans-serif;
+  padding: 0.2em;
+  z-index: 1000;
+}
+#novanet-why-sign-in .toggle-why {
+  float: right;
+}
+#novanet-why-sign-in ul {
+  list-style-type: none;
+  margin: 2em;
+  padding: 0;
+}
 /*--- To expand the header image area --- */
 #exlidHeaderTile{padding: 0; width:100%;}
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
-#exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
-/* .EXLSignOut is the className for the Sign In and Sign Out labels */
-#exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
+
+/* the display:none on this will be removed with javascript */
+#exlidUserAreaTile {position:absolute;font-weight: bold;right:0;top:0;z-index:20;height:25px;display:none;}
+/* we just want to hide this. */
+#exlidMyShelf { display: none; }
+/* override defaults */
+#exlidUserAreaRibbon li {
+  height: 100%;
+  background-image: none;
+}
+#exlidUserAreaRibbon li a {
+  padding: 0.6em;
+  border-left: 1px solid lightgrey;
+}
 
 
 #logo {

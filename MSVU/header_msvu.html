@@ -15,6 +15,47 @@
   <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Help</a>
 </div>
 
+<div id="novanet-sign-in" style="display:none">
+	<h1>^</h1>
+	<p>You should sign in!</p>
+	<span>(<a class='toggle-why' href="#">why?</a>)</span>
+</div>
+<div id="novanet-why-sign-in" style="display:none">
+  <a class="toggle-why" href="#">&times;</a>
+  <ul>
+    <li>Reason 1</li>
+    <li>Reason 2</li>
+    <li>Reason 3</li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var $userTile = $('#exlidUserAreaTile'),
+        $userName = $('#exlidUserName'),
+        $userAcct = $('#exlidMyAccount').hide(),
+        issignedin = $('#exlidSignOut').is(':visible');
+           
+    $userName.find('.EXLUserAreaStart').hide();
+    var $nameSpan = $userName.find('.EXLUserNameDisplay');
+    //do this next 'if' with a code table change, not with the script.
+    if ($nameSpan.html().replace(/\s*/g, '') == 'Guest'){
+      $nameSpan.html('Guest Session');
+    }
+    $nameSpan.wrap(
+      $('<a>').attr('href', $userAcct.find('a').attr('href'))
+    );
+    $userTile.show();    
+
+    if (!issignedin){
+      $('#novanet-sign-in').show('slow');
+    }
+    $('.toggle-why').on('click', function(evt){
+      evt.preventDefault();
+      $('#novanet-why-sign-in').toggle('fast');
+    });
+  });
+</script>
+
 
 <!-- temporarily re-adding things I had refactored into common.html -->
 

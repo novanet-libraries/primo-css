@@ -31,6 +31,13 @@ a:hover {
 
 /* ----------------------------------------------- HEADER ----------------------------------------------- */
 
+
+@media screen and (max-width: 500px){
+  #novanet-sign-in, #novanet-why-sign-in, #header-links {
+    display: none !important;
+  }
+}
+
 /*--- To add background image to header ---*/
 
 .EXLLogo {
@@ -49,6 +56,44 @@ a:hover {
 #exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
+
+#novanet-sign-in {
+  position: fixed;
+  top: 10px;
+  right: 32%;
+  width: 32%;
+  min-width: 23em;
+  font-size: 14px;
+  font-family: Quicksand, QuicksandBook, Open-sans, verdana, helvetica, arial, sans-serif;
+  padding: 0.2em;
+  background-color: white;
+  color: #1f5190;
+  box-shadow: 1px 1px 1px 1px;
+  border-radius: 0.4em;
+  z-index: 1000;
+}
+#novanet-sign-in h3 {
+  background-color: #1f5190;
+  background-image: linear-gradient(#4f81c0, #1f5190);
+  border-radius: 0.3em 0.3em 0 0;
+  padding: 0.2em;
+  color: white;
+}
+#novanet-sign-in h3 a {
+  color: white;
+}
+#novanet-sign-in ul {
+  list-style-type: normal;
+  margin-left: 3em;
+}
+#novanet-sign-in .close {
+  float: right;
+  font-weight: bold;
+}
+#novanet-sign-in > div {
+  padding: 2em;
+}
+
 
 #logo {
   float: left;

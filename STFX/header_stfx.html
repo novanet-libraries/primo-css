@@ -13,6 +13,25 @@
   <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Help</a>
 </div>
 
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    var $userTile = $('#exlidUserAreaTile'),
+        $userName = $('#exlidUserName'),
+        $userAcct = $('#exlidMyAccount').hide();
+           
+    $userName.find('.EXLUserAreaStart').hide();
+    var $nameSpan = $userName.find('.EXLUserNameDisplay');
+    //do this next 'if' with a code table change, not with the script.
+    if ($nameSpan.html().replace(/\s*/g, '') == 'Guest'){
+      $nameSpan.html('Guest Session');
+    }
+    $nameSpan.wrap(
+      $('<a>').attr('href', $userAcct.find('a').attr('href'))
+    );
+    $userTile.show();
+  });
+</script>
 
 <!-- temporarily re-adding things I had refactored into common.html -->
 

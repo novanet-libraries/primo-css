@@ -15,6 +15,42 @@
   <a title="Get help using this portal" target="popup" href="helpHandler.do?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">Help</a>
 </div>
 
+<div id="novanet-sign-in" style="display:none;">
+  <h3>
+    Sign In!
+    <a class="close" href="#">&times;</a>
+  </h3>
+  <div>
+    <p>Some of our subscriptions require sign-in to be included in search results.</p>
+    <p>If you don't sign in, you won't see results from
+      <ul>
+        <li>Source 1</li>
+        <li>Source 2</li>
+        <li>Source 3</li>
+      </ul>
+      and possibly more.
+    </p>
+    <footer>
+      <a class="close close-forever" href="#">I get it.  Don't show this again.</a>
+    </footer>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var isSignedIn = $('#exlidSignOut').is(':visible'),
+        searchedPrimoCentral = location.search.indexOf('primo_central_multiple_fe'),
+        $signInWarning = $('#novanet-sign-in');
+    
+    if (searchedPrimoCentral && searchedPrimoCentral > -1 && !isSignedIn && undefined == localStorage['novanet.suppressSignInWarning']){
+      $signInWarning.show('fast').find('.close').on('click', function(){
+        $signInWarning.hide();
+        if ($(this).hasClass('close-forever')){
+          localStorage['novanet.suppressSignInWarning'] = true;
+        }
+      });
+    }
+  });
+</script>
 
 <!-- temporarily re-adding things I had refactored into common.html -->
 
