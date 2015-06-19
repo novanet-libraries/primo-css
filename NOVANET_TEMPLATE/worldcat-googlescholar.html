@@ -1,0 +1,136 @@
+
+<!-- the contents of this file will be loaded into a div with id="novanet-external-search-links" -->
+
+<div class="EXLFacetContainer" style="display:none">
+  <h3>Didn't find what you were looking for?</h3>
+  <ol class="EXLFacetsList EXLFacetsListPreview">
+    <li class="EXLFacet" id="worldcat-link">
+      <span class="label">For Books try</span>
+      <a target="_blank" href="http://www.worldcat.org/search"><b>WorldCat</b></a>
+    </li>
+    <li class="EXLFacet" id="googlescholar-link">
+      <span class="label">For Articles try</span>
+      <a target="_blank" href="https://scholar.google.com/scholar"><b>Google Scholar</b></a>
+    </li>
+  </ol>
+</div>
+
+<script type="text/javascript">
+// <[![CDATA
+
+//add a libguides link??
+
+var novanet = novanet || {};
+if (!novanet.params){
+  if (!novanet.uri){
+    novanet.uri = new URI();
+  }
+  novanet.params = novanet.uri.search(true);
+}
+
+//iife to wrap all the vars declared here.
+(function(){
+
+  if ($('#novanet-external-search-links').length < 1){
+    //There's no facet list on this page. Don't do anything.
+    return;
+  }
+  
+  var query = (novanet.params.query && novanet.params.query.split(',',3)[2]) || '',
+      t0 = novanet.params['vl(freeText0)'] || '',
+      t1 = novanet.params['vl(freeText1)'] || '',
+      t2 = novanet.params['vl(freeText2)'] || '',
+      freeText = t0 + ' ' + t1 + ' ' + t2;
+
+  query = query.replace(/\s+/g, ' ').replace(/^\s|\s$/g, '');
+  freeText = freeText.replace(/\s+/g, ' ').replace(/^\s|\s$/g, '');
+  query = query || freeText;
+
+  //console.log('query: "' + query + '"');
+  //set the rest of the variables we'll need.
+  var lang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr' : 'en',
+      $wlink = $('#worldcat-link > a'),
+      wlink = new URI($wlink.attr('href')),
+      $glink = $('#googlescholar-link > a'),
+      glink = new URI($glink.attr('href')),
+      showWorldCat = true, showGoogleScholar = true;
+
+
+  //institution-specific worldcat hostnames and show/hide options.
+  switch (novanet.params.vid){
+    case 'ACAD':
+      wlink.hostname('acadiau.on.worldcat.org');
+      showGoogleScholar = false;
+      break;
+    case 'AST':
+      wlink.hostname('ast.on.worldcat.org');
+      showGoogleScholar = false;
+      break;
+    case 'CBU':
+      //wlink.hostname('cbu.on.worldcat.org');
+      showWorldCat = false;
+      showGoogleScholar = false;
+      break;
+    case 'DAL':
+    case 'KINGS':
+      wlink.hostname('dal.on.worldcat.org');
+      break;
+    case 'NSCC':
+      //wlink.hostname('nscc.on.worldcat.org');
+      showWorldCat = false;
+      break;
+    case 'NSCAD':
+      wlink.hostname('nscad.on.worldcat.org');
+      break;
+    case 'MSVU':
+      wlink.hostname('msvu.on.worldcat.org');
+      break;
+    case 'SMU' :
+      wlink.hostname('smu.on.worldcat.org');
+      showGoogleScholar = false;
+      break;
+    case 'STFX':
+      wlink.hostname('stfx.on.worldcat.org');
+      break;
+    case 'USA':
+      showWorldCat = false;
+      showGoogleScholar = false;
+      break;    
+    default :
+      break;
+  }
+
+  if (showWorldCat){
+    //modify the local URI object:
+    //todo, maybe? there's some Advanced Search stuff we can do here that is currently omitted.
+
+    //WorldCat Discovery expects query terms in 'queryString' param; WorldCat.org looks in 'q'.
+    var paramName = wlink.hostname().match(/\.on\./) ? 'queryString' : 'q';
+    wlink.addQuery(paramName, query);
+    //update the DOM node with the new href:
+    $wlink.attr('href', wlink.toString());
+  }
+  else {
+    $('#worldcat-link').hide();
+  }
+
+  if (showGoogleScholar){
+    //modify the local URI object:
+    glink.addQuery('hl', lang);
+    glink.addQuery('q', query);
+    //update the DOM node with the new href:
+    $glink.attr('href', glink.toString());
+  }
+  else{
+    $('#googlescholar-link').hide();
+  }
+
+  if (showWorldCat || showGoogleScholar){
+    //we're done.  Show the tile.
+    $('#novanet-external-search-links > .EXLFacetContainer').show();
+  }
+
+})();//end iife
+
+// ]]>
+</script>
