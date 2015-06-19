@@ -33,3 +33,51 @@
   }
 // ]]>
 </script>
+
+<script>
+// <![CDATA[
+//  add MaRC View to the Actions menu
+
+  var novanet = novanet || {};
+  novanet.marcWindows = novanet.marcWindows || {};
+  novanet.openMarcView = function(id){
+    var name = 'marcview'+id, winRef = novanet.marcWindows[name];
+    
+    if (winRef == null || winRef.closed){
+      winRef = window.open(
+        "http://www.novanet.ca/marc/marcview.php?docnum="+id,
+        name,
+        "titlebar=1,resizable=1,scrollbars=1,status=0,menubar=0,toolbar=0,location=0"
+      );
+    }
+    else{
+      winRef.focus();
+    }
+  };
+
+  $(document).ready(function(){
+    //on open action menu
+    $('#exlidResultsContainer').on('click', '.EXLTabHeaderButtonSendTo', function(evt){
+      var $this = $(this),
+          $thisLink = $this.children('a'),
+          $thisList = $this.children('ol'),
+          matches = $thisLink.attr('id').match(/NOVANET_ALEPH(\d{9})/),
+          id = matches && matches[1];
+      
+      if (id && $thisList.find('li.marcview').length < 1){
+        $thisList.append(
+          $('<li>').addClass('marcview').append(
+            $('<a>').attr({
+              href: '#'
+            }).on('click', function(evt){
+              evt.preventDefault();
+              novanet.openMarcView(id);
+            }).html('MaRC View')
+          )
+        );
+      }
+    });
+  });
+
+// ]]>
+</script>
