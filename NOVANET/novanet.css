@@ -1,20 +1,6 @@
 /* ----------------------------------------------- GENERAL --------------------------------------------------*/
 
-/*
-@font-face {
-  font-family: 'QuicksandBook';
-  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot');
-  src: url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
-       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.woff2') format('woff2'),
-       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont') format('woff'),
-       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.ttf') format('truetype'),
-       url('http://www.novanet.ns.ca/wp-content/themes/novanet/css/Quicksand_Book-webfont.svg#quicksandbook') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
-
 
 /* ----------------------------------------------- HOME PAGE ----------------------------------------------- */
 
@@ -98,7 +84,7 @@
 }
 
 #header-links {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-family: Quicksand, Verdana, Open Sans, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 21px;
   letter-spacing: -1px;
@@ -126,7 +112,7 @@
 }
 
 #footerEXL {
-  font-family: QuicksandBook, Quicksand, Helvetica, Arial, sans-serif;
+  font-family: Quicksand, Verdana, Open Sans, Helvetica, Arial, sans-serif;
   font-size: 21px;
   letter-spacing: -1px;
   background-color: #0075b0;
