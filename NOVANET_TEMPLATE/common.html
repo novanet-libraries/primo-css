@@ -45,7 +45,7 @@
     
     if (winRef == null || winRef.closed){
       winRef = window.open(
-        "http://www.novanet.ca/marc/marcview.php?docnum="+id,
+        "http://www.novanet.ca/marc/"+id, //this is a full HTML page displaying a single MaRC record.
         name,
         "titlebar=1,resizable=1,scrollbars=1,status=0,menubar=0,toolbar=0,location=0"
       );
