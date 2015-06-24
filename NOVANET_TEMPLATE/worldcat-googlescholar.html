@@ -50,8 +50,10 @@ if (!novanet.params){
   //set the rest of the variables we'll need.
   var lang = $('body').hasClass('EXLCurrentLang_fr_FR') ? 'fr' : 'en',
       $wlink = $('#worldcat-link > a'),
+      $wlabel = $('#worldcat-link > .label'),
       wlink = new URI($wlink.attr('href')),
       $glink = $('#googlescholar-link > a'),
+      $glabel = $('#googlescholar-link > .label'),
       glink = new URI($glink.attr('href')),
       showWorldCat = true, showGoogleScholar = true;
 
@@ -87,6 +89,7 @@ if (!novanet.params){
       break;
     case 'SMU' :
       wlink.hostname('smu.on.worldcat.org');
+      $wlabel.html("Search");
       showGoogleScholar = false;
       break;
     case 'STFX':
