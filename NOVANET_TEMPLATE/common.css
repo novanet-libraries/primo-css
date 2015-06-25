@@ -107,7 +107,9 @@
 /* Nobody finds this useful */
 #exlidSuggestedList { display: none; }
 
-
+#facetList .EXLFacetContainer ol {
+  margin: 1.4em;
+}
 /*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
 
 #exlidFacetsLightboxContainer a.EXLSubmit {

@@ -33,3 +33,16 @@
   }
 // ]]>
 </script>
+
+<script>
+  $(document).ready(function(){
+    var $facetList = $('#facetList');
+    $facetList.find('h1').remove();
+    $facetList.on('click', '.novanet-facet-toggle', function(evt){
+      $(evt.target).parent().siblings().toggle('fast');
+    });
+    $facetList.find('h4').append(
+      $('<span>').addClass('novanet-facet-toggle').html('Show/Hide')
+    ).siblings().hide('fast');
+  });
+</script>
