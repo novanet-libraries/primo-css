@@ -36,13 +36,27 @@
 
 <script>
   $(document).ready(function(){
-    var $facetList = $('#facetList');
-    $facetList.find('h1').remove();
-    $facetList.on('click', '.novanet-facet-toggle', function(evt){
-      $(evt.target).parent().siblings().toggle('fast');
-    });
+    var $facetList = $(this);
     $facetList.find('h4').append(
-      $('<span>').addClass('novanet-facet-toggle').html('Show/Hide')
-    ).siblings().hide('fast');
+      $('<span>').addClass('down').html('&#x25bc;').hide(),
+      $('<span>').addClass('right').html('&#x25ba;')
+    ).siblings().hide();
+
+    $facetList.find('h1').remove();
+    $facetList.on('click', 'h4', function(evt){
+      var $this = $(this);
+      //close any that are open (including toggling the down/right arrows).
+      $this.parent().siblings().
+        find('.down').hide().end().
+        find('.right').show().end().
+        children(':not(h4)').hide('fast');
+
+      //toggle this down/right arrow
+      $this.find('.down , .right').toggle();
+
+      //show contents of this container
+      $this.siblings().toggle('fast');
+    });
+    
   });
 </script>

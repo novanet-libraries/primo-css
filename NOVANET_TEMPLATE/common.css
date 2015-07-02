@@ -107,9 +107,19 @@
 /* Nobody finds this useful */
 #exlidSuggestedList { display: none; }
 
-#facetList .EXLFacetContainer ol {
-  margin: 1.4em;
+#facetList {
+  margin-bottom: 1.5em;
 }
+#facetList .EXLFacetContainer ol {
+  margin: 1em;
+}
+#facetList .EXLFacetContainer {
+  margin-bottom: 0;
+  border-radius: 0.4em;
+  padding: 0.5em 0.5em 1em 0.5em;
+  border: 1px solid #777676;
+}
+#facetList .down, #facetList .right { float: right; padding-right: 2em; }
 /*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
 
 #exlidFacetsLightboxContainer a.EXLSubmit {
