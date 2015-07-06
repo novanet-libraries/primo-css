@@ -113,11 +113,22 @@
 #facetList .EXLFacetContainer ol {
   margin: 1em;
 }
+
 #facetList .EXLFacetContainer {
   margin-bottom: 0;
+/*
   border-radius: 0.4em;
   padding: 0.5em 0.5em 1em 0.5em;
   border: 1px solid #777676;
+*/
+}
+
+#facetList .EXLFacetContainer h4 {
+  line-height: 150%;
+  color: black;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
 }
 #facetList .down, #facetList .right { float: right; padding-right: 2em; }
 /*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
