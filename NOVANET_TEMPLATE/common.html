@@ -24,8 +24,8 @@
   if (!novanet.uri){
     novanet.uri = new URI();
   }
-  if (novanet.uri.hostname().substr(0,12) == 'nova-primosb'){
-    var liveLink = novanet.uri.hostname(novanet.uri.hostname().replace('nova-primosb','novanet-primo'));
+  if (novanet.uri.hostname().substr(0,12) == 'nova-primosb' || novanet.uri.hostname().indexOf('test.novanet.ca') > -1){
+    var liveLink = novanet.uri.hostname(novanet.uri.hostname().replace('nova-primosb','novanet-primo').replace('test', ''));
     var div = $('#novanet-sandbox-indicator');
     div.find('.live-link').attr('href', liveLink);
     div.find('header').on('click', function(){ div.find('.info').toggle(); });
