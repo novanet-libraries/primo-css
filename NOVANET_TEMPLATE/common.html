@@ -37,12 +37,13 @@
 <script>
   $(document).ready(function(){
     var $facetList = $('#facetList');
+
+    $facetList.find('h1').remove();
     $facetList.find('h4').append(
       $('<span>').addClass('down').html('&#x25bc;').hide(),
       $('<span>').addClass('right').html('&#x25ba;')
     ).siblings().hide();
 
-    $facetList.find('h1').remove();
     $facetList.on('click', 'h4', function(evt){
       var $this = $(this);
       //close any that are open (including toggling the down/right arrows).
