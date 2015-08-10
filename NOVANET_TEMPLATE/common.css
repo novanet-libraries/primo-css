@@ -107,6 +107,8 @@
 /* Nobody finds this useful */
 #exlidSuggestedList { display: none; }
 
+#pyrTopLevel { display: none; }
+
 /*------------------------------ Facet List 'More Options' lightbox ------------------------------*/
 
 #exlidFacetsLightboxContainer a.EXLSubmit {
