@@ -35,6 +35,23 @@
   opacity: 1;
 }
 
+#novanet-sign-in-banner {
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  display: block;
+  background-image: url(../../images/bg_strip_system_feedback.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  color: #000000;
+  font-weight: bold;
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+#novanet-sign-in-banner a { color: black; margin: 0 1em; }
+#novanet-sign-in-banner a:last-child { float: right; }
+
 /* --------------------------------  SEARCH TILE -------------------------------------------------*/
 
 

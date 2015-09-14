@@ -32,5 +32,44 @@
     div.show();
   }
 
+  //add a persistent sign in banner in the results list
+  $(document).ready(function(){
+    
+    var pciInScope = (location.search.indexOf('primo_central') > -1),
+        hasResults = ($('#exlidResultsTable td').length > 0),
+        isSignedIn = $('#exlidSignOut').is(':visible'),
+        optedOut = localStorage && localStorage.hideSignInBanner;
+
+    if (pciInScope && hasResults && !isSignedIn && !optedOut){
+      //$('#resultsHeaderNoId').prepend(
+      //simple prepend fails due to the hidden bX Hot Articles thing.
+      $('#resultsHeaderNoId .EXLCustomLayoutTile').first().after(
+        $('<div>').attr(
+          'id', 'novanet-sign-in-banner'
+        ).append(
+          $('<a>').attr(
+            'href', $('#exlidSignIn a').attr('href')
+          ).html(
+            'Sign in for more results'
+          ),
+          $('<a>').attr('href', '#').html(
+            '<small>(why?)</small>'
+          ).on('click', function(){
+            alert("By signing in you'll have access to more library resources.\n\nAdditionally, you will be able to\n\n  * Save books, articles, and other items to your e-shelf\n  * Request items, renew loans, and check fines\n  * View personal account settings\n  * Tag and review items\n  * Set alerts, save search results, and view search history");
+          }),
+          $('<a>').attr({
+            href  :'#',
+            title : "Don't show this again."
+          }).html(
+            '&times;' //an 'X' (×)
+          ).on('click', function(){
+            localStorage.hideSignInBanner = true;
+            $('#novanet-sign-in-banner').hide();
+          })
+        )
+      );
+    }
+    
+  });
 // ]]>
 </script>
