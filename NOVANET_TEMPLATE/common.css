@@ -117,6 +117,12 @@
     margin-left: 0px;
     background-color: #ffffff;
   }
+	#header-links {
+		display:none;
+	}
+	.scopesList {
+		display: none;
+	}
 }
 
 /*-------------------------------     FACETS       -----------------------------------------------*/
