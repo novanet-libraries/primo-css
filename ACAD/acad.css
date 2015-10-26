@@ -19,7 +19,7 @@ a:hover {
 #exlidSearchBanner, .EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;}
 
 /* --- To remove Last Update line ---*/
-.EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;} 
+.EXLFooterTile div.EXLFooterUpdateContainer div.EXLFooterLastUpdate {display:none;}
 #exlidMainMenuTile div.EXLMainMenuContainer {float:right; width:40em}
 
 /*--- To remove last bar on first row of footer ---*/
@@ -54,15 +54,13 @@ a:hover {
 }
 
 #header-links {
-  font-family: BebasNeueRegular, Oswald, Open Sans Condensed, Impact, Arial, sans-serif;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 18px;
   float: left;
-  letter-spacing: 2.4px;
   margin: 30px 0 0 30px;
   padding: 0;
   color: white;
-  text-transform: uppercase;
 }
 #header-links a:link,
 #header-links a:visited  {
@@ -83,12 +81,7 @@ a:hover {
 }
 
 .EXLFooterTile {
-/*
-  position: fixed;
-  bottom: 0;
-  left: 0;
-*/
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
   font-size: 18px;
   background-color: #790517;
   background-image: none;
@@ -137,8 +130,8 @@ a:hover {
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   color: #56001B;
 }
- 
-/* really define the facet sections 
+
+/* really define the facet sections
 .EXLFacetContainer {
   border: 1px solid #0075b0;
   padding: 0.1em;
@@ -297,7 +290,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 #exlidFacetsLightboxContainer a.EXLSubmit {
   background-color: #0075b0;
-  background-image: linear-gradient(#30A5e0, #0075b0);  
+  background-image: linear-gradient(#30A5e0, #0075b0);
 }
 .EXLFacetsLightboxTabsRibbon {
   border-bottom: 2px solid #0075b0;
