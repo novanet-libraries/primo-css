@@ -79,14 +79,14 @@ a:hover {
 /* keep the footer at the bottom */
 .EXLResultsTile,
 .EXLHomeContainer {
-  min-height: 30em;
+  min-height: 35em;
 }
 
 .EXLFooterTile {
-  font-family: Quicksand, Verdana, Open Sans, Helvetica, Arial, sans-serif;
-  font-size: 21px;
-  letter-spacing: -1px;
-  background-color: #620120;
+  font-family: BebasNeueRegular, Oswald, Open Sans Condensed, Impact, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2.4px;
+  background-color: #790517;
   background-image: none;
   min-height: 156px;
   color: white;
