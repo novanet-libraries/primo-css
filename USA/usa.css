@@ -250,7 +250,6 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 /*--- To change width of advanced search button ---*/
 #exlidAdvancedSearchRibbon .EXLSearchFieldRibbonFormSubmitSearch {width: 8.5em;}
-#exlidAdvancedSearchRibbon .EXLSearchFieldRibbon {height:180px;}
 
 /* Advanced Search & Browse Links */
 .EXLSearchFieldRibbonAdvancedSearchLink a.EXLSearchFieldRibbonAdvancedTwoLinks {
