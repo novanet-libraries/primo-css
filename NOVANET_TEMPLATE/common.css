@@ -52,6 +52,37 @@
 #novanet-sign-in-banner a { color: black; margin: 0 1em; }
 #novanet-sign-in-banner a:last-child { float: right; }
 
+#novanet-holiday-notice {
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  display: block;
+  background-color: #fff7d7;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  color: #4b4b4b;
+  margin-bottom: 0.5em;
+}
+#novanet-holiday-notice > img {
+  width: 48px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 10%;
+}
+#novanet-holiday-notice > p {
+  display: inline-block;
+  vertial-align: top;
+  margin: 0;
+  padding: 4px 0;
+  max-width: 80%;
+  line-height: 20px;
+}
+#novanet-holiday-notice > a {
+  float: right;
+  font-size: 120%;
+  font-weight: bold;
+}
 /* --------------------------------  SEARCH TILE -------------------------------------------------*/
 
 
