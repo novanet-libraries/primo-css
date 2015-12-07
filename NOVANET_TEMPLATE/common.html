@@ -32,9 +32,38 @@
     div.show();
   }
 
-  //add a persistent sign in banner in the results list
   $(document).ready(function(){
+
+  //add the no-holds holiday notice.
+  if (!(localStorage && localStorage.hideHolidayNotice)){
+      $('#resultsTileNoId').prepend(
+        $('<div>').attr(
+          'id', 'novanet-holiday-notice'
+        ).append(
+          $('<img>').attr({
+            src: '/primo_library/libweb/uploaded_files/NOVANET_TEMPLATE/info-icon-200x200.png',
+            alt: 'information icon',
+            width: '48',
+            height: '48'
+          }),
+          $('<p>').html(
+            "Novanet Express and holds will not be available due to library holiday closures from Tuesday December 15 to Sunday January 3.<br>Please check with your library for other Document Delivery/Interlibrary Loan alternatives during this time."
+          ),
+          $('<a>').attr({
+            href  :'#',
+            title : "Don't show this again."
+          }).html(
+            '&times;' //an 'X' (×)
+          ).on('click', function(){
+            //this is techincally a bug because we can get to this branch *because* localStorage is not available.
+            localStorage.hideHolidayNotice = true;
+            $('#novanet-holiday-notice').hide();
+          })
+        )
+      );    
+    }
     
+    //add a persistent sign in banner in the results list
     var pciInScope = (location.search.indexOf('primo_central') > -1),
         hasResults = ($('#exlidResultsTable td').length > 0),
         isSignedIn = $('#exlidSignOut').is(':visible'),
@@ -71,5 +100,6 @@
     }
     
   });
+
 // ]]>
 </script>
