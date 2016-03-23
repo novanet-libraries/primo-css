@@ -1,12 +1,19 @@
 /* ----------------------------------------------- GENERAL --------------------------------------------------*/
 
+/* St. Mary's fonts.  Convert these to <link> tags if we ever get access to <head> */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Quicksand:400,700);
+
+body {
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 a:link,
-a:visited  {
- color: #021181;
+a:visited {
+ color: #961a4a;
  text-decoration: none;
 }
 a:hover {
-  color: #021181;
+  color: #961a4a;
   text-decoration: underline;
 }
 
@@ -35,10 +42,10 @@ a:hover {
 /*--- To add background image to header ---*/
 #exlidHeaderTile {
   padding: 0;
-  background: url(headerbg.png) right no-repeat;
+  background-color: white;
 }
 #exlidHeaderContainer {
-  background-color: #021181;
+  background-color: white;
 }
 
 
@@ -46,7 +53,7 @@ a:hover {
 #exlidHeaderTile{width:100%;}
 .EXLSearchWrapper{clear:both;}
 #exlidMainMenuTile {display:none;}
-#exlidUserAreaTile {position:absolute;right:410px;top:0;z-index:20;height:25px}
+#exlidUserAreaTile {position:absolute;right:0;top:0;z-index:20;height:25px}
 /* .EXLSignOut is the className for the Sign In and Sign Out labels */
 #exlidUserAreaRibbon .EXLSignOut { font-weight: bold }
 
@@ -58,17 +65,15 @@ a:hover {
 }
 
 #header-links {
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 18px;
   float: left;
-  margin: 55px;
+  margin: 30px;
   padding: 0;
-  color: white;
 }
 #header-links a:link,
 #header-links a:visited  {
- color: white
+ color: #961a4a;
 }
 #header-links a:hover {
   text-decoration: none;
@@ -83,19 +88,16 @@ a:hover {
 }
 
 #footerEXL {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-family: Quicksand, Verdana, Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 18px;
   letter-spacing: -1px;
-  background-color: #021181;
-  background-image: none;
-  background-repeat: repeat-x;
-  min-height: 156px;
-  color: white;
+  background-color: white;
+  color: #961a4a;
 }
 #footerEXL a:link,
 #footerEXL a:visited {
   padding: 0.2em;
-  color: white;
+  color: #961a4a;
 }
 #footerEXL a:hover {
   text-decoration: none;
@@ -112,7 +114,7 @@ a:hover {
 /* hide the Show bX Hot Articles thing */
 #resultsHeaderNoId > .EXLCustomLayoutTile:first-child { display: none; }
 
-.EXLTabsRibbon div li.EXLResultTab a { color: #021181; }
+.EXLTabsRibbon div li.EXLResultTab a { color: #961a4a; }
 
 /* --- To remove Tags & Reviews Tab ---*/
 .EXLTabsRibbon div li.EXLReviewsTab {display:none;}
@@ -125,13 +127,13 @@ a:hover {
 .EXLSliderRefine a,
 .EXLSliderRefine a:hover,
 .EXLSliderRefine a:visited {
-  background-color: #021181;
-  background-image: linear-gradient(#3241b1, #021181);
+  background-color: #961a4a;
+  background-image: linear-gradient(#c64a7a, #961a4a);
   color: white;
 }
 /* more slider stuff */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  color: #021181;
+  color: #961a4a;
 }
  
 /* really define the facet sections 
@@ -219,7 +221,7 @@ html:not([ie8andbelow]) .EXLResultsList td.EXLResultNumber { vertical-align: mid
 
 /* Most CSS that is common to all views is found here. */
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+/* @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700); */
 
 /* --------------------------------  SEARCH TILE -------------------------------------------------*/
 
